@@ -36,3 +36,4 @@ yarn-error.log*
 # Misc
 *.tsbuildinfo
 next-env.d.ts
+node_modules
