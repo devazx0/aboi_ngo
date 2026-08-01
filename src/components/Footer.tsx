@@ -8,9 +8,16 @@ export async function Footer() {
     <footer className="bg-tertiary w-full pt-xl pb-md px-gutter">
       <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-md">
         <div className="space-y-sm">
-          <h2 className="font-headline-lg text-headline-lg text-surface-container-lowest">
-            NGO-ABOI
-          </h2>
+          <div className="flex items-center gap-xs">
+            <img
+              src="/logo.png"
+              alt="NGO-ABOI Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <h2 className="font-headline-lg text-headline-lg text-surface-container-lowest">
+              NGO-ABOI
+            </h2>
+          </div>
           <p className="font-body-md text-body-md text-on-tertiary-container">
             {t("tagline")}
           </p>

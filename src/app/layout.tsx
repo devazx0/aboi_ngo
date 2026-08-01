@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "NGO-ABOI | Association for Charity & Guidance",
   description:
     "Dedicated to Charity, Scientific Excellence, and Peace in Benin. NGO ABOI works daily for the spiritual, social, educational, and health development of communities.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
 };
 
 export default async function RootLayout({
