@@ -8,6 +8,7 @@ export interface BlogPostItem {
   excerpt?: string | null;
   content: string;
   coverImage?: string | null;
+  category: string;
   status: string;
   createdAt: string;
   author: {
@@ -21,6 +22,7 @@ export interface SaveBlogPostParams {
   content: string;
   excerpt?: string;
   coverImage?: string;
+  category?: string;
   status: string;
 }
 

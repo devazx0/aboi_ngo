@@ -128,6 +128,9 @@ export default function AdminBlogPage() {
                       Status
                     </th>
                     <th className="py-3 px-6 font-medium text-xs uppercase tracking-wider text-on-surface-variant">
+                      Category
+                    </th>
+                    <th className="py-3 px-6 font-medium text-xs uppercase tracking-wider text-on-surface-variant">
                       Date
                     </th>
                     <th className="py-3 px-6 font-medium text-xs uppercase tracking-wider text-on-surface-variant text-right">
@@ -151,6 +154,9 @@ export default function AdminBlogPage() {
                         <StatusBadge status={post.status} />
                       </td>
                       <td className="py-4 px-6 text-on-surface-variant text-sm">
+                        {post.category}
+                      </td>
+                      <td className="py-4 px-6 text-on-surface-variant text-sm">
                         {new Date(post.createdAt).toLocaleDateString()}
                       </td>
                       <td className="py-4 px-6 text-right">
@@ -170,6 +176,9 @@ export default function AdminBlogPage() {
                     <p className="font-medium text-on-surface text-sm truncate">{post.title}</p>
                     <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                       <StatusBadge status={post.status} />
+                      <span className="text-xs text-on-surface-variant bg-surface-variant px-2 py-0.5 rounded-full">
+                        {post.category}
+                      </span>
                       <span className="text-xs text-on-surface-variant">
                         {new Date(post.createdAt).toLocaleDateString()}
                       </span>

@@ -1,7 +1,20 @@
-import { PrismaClient, Role, PostStatus } from "@prisma/client";
+import { PrismaClient, Role, PostStatus } from "../src/generated/client";
 import bcrypt from "bcryptjs";
 
-const prisma = new PrismaClient();
+const connectionString =
+  process.env.DIRECT_URL || process.env.DATABASE_URL;
+
+const prisma = new PrismaClient(
+  connectionString
+    ? {
+        datasources: {
+          db: {
+            url: connectionString,
+          },
+        },
+      }
+    : undefined
+);
 
 async function main() {
   console.log("🌱 Starting database seed...");
@@ -66,36 +79,102 @@ async function main() {
   }
   console.log(`✅ Seeded ${pillars.length} NGO pillars.`);
 
-  // 3. Create Initial Blog Posts
+  // 3. Create Expanded Blog & News Posts
   const samplePosts = [
     {
-      slug: "new-educational-center-opening",
-      title: "New Educational Center Opening in Benin",
-      excerpt: "ABOI NGO proudly announces the opening of a state-of-the-art educational facility for local youth.",
-      content: "<p>We are thrilled to celebrate the launch of our newest educational center. This facility will serve over 500 children every year with digital access, books, and trained teachers.</p>",
+      slug: "clean-water-initiative-reaches-10-villages",
+      title: "Clean Water Initiative Reaches 10 New Villages in Rural Benin",
+      excerpt: "Our latest ecological health drive successfully installed solar-powered water filtration systems in rural communities.",
+      content: `<p>We are proud to announce the completion of our latest clean water project, bringing safe, solar-filtered drinking water to over 8,000 residents across 10 rural villages.</p><h2>Project Milestones</h2><ul><li><p>Installed 10 solar-powered filtration pumps.</p></li><li><p>Trained 30 local water management committee members.</p></li><li><p>Reduced waterborne illness cases by an estimated 65% in targeted regions.</p></li></ul><p>Clean water is a fundamental right. Through generous donor support and community collaboration, we continue to build sustainable infrastructure that saves lives.</p>`,
+      category: "Healthcare",
+      coverImage: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&q=80&w=1200",
       status: PostStatus.PUBLISHED,
       authorId: admin.id,
-      publishedAt: new Date("2024-05-12"),
+      publishedAt: new Date("2026-07-28"),
       viewsCount: 1420,
     },
     {
-      slug: "community-outreach-program-highlights",
-      title: "Community Outreach Program Highlights",
-      excerpt: "A recap of our recent health and nutrition drive serving over 1,200 families.",
-      content: "<p>Our volunteers dedicated over 200 hours last month distributing food baskets, clean water kits, and basic medical checkups.</p>",
-      status: PostStatus.DRAFT,
-      authorId: admin.id,
-      publishedAt: null,
-      viewsCount: 0,
-    },
-    {
-      slug: "annual-charity-gala-2024",
-      title: "Annual Charity Gala 2024",
-      excerpt: "Join us in celebrating community achievements and fundraising for upcoming 2025 initiatives.",
-      content: "<p>The annual charity gala brought together leaders, donors, and partners to support sustainable development across West Africa.</p>",
+      slug: "annual-science-excellence-awards-2026",
+      title: "Annual Science & Academic Excellence Awards 2026",
+      excerpt: "Celebrating the outstanding academic achievements of over 500 scholars supported by the ABOI NGO educational fund.",
+      content: `<p>This week, ABOI NGO hosted its 2026 Science Excellence Ceremony, honoring top-performing students from secondary schools and university scholarship recipients.</p><h2>Key Highlights</h2><p>Over 500 scholars received merit grants, digital learning devices, and mentorship pledges from regional university professors.</p>blockquote>Investing in education and scientific literacy is the single most effective way to empower the next generation.</blockquote><p>We extend our deepest gratitude to all our partner institutions and patrons who made this milestone possible.</p>`,
+      category: "Education",
+      coverImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200",
       status: PostStatus.PUBLISHED,
       authorId: admin.id,
-      publishedAt: new Date("2024-04-28"),
+      publishedAt: new Date("2026-07-20"),
+      viewsCount: 2150,
+    },
+    {
+      slug: "interfaith-symposium-regional-cohesion",
+      title: "Interfaith Dialogue Symposium for Regional Peace & Cohesion",
+      excerpt: "A landmark symposium bringing together community leaders to draft a unified charter for lasting peace and solidarity.",
+      content: `<p>In collaboration with local civic organizations, ABOI NGO convened over 120 community and religious representatives in Cotonou for a two-day conference focused on interfaith harmony and social cohesion.</p><h2>Key Resolutions</h2><ul><li><p>Establishment of local youth peace councils.</p></li><li><p>Joint community development programs across diverse neighborhoods.</p></li><li><p>Creation of an emergency civic mediation committee.</p></li></ul><p>Building peace requires active listening, mutual respect, and shared goals for social development.</p>`,
+      category: "Social Impact",
+      coverImage: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-07-15"),
+      viewsCount: 980,
+    },
+    {
+      slug: "maternal-health-clinic-launch-akpakpa",
+      title: "Mobile Maternal Health Clinic Launched in Akpakpa",
+      excerpt: "A new mobile clinic initiative providing free prenatal care, ultrasounds, and essential medicine to expectant mothers.",
+      content: `<p>Ensuring access to healthcare during pregnancy is vital for reducing infant and maternal mortality. ABOI NGO has officially deployed its first fully equipped mobile healthcare van in Akpakpa.</p><h2>Services Offered</h2><ul><li><p>Free weekly prenatal consultations and checkups.</p></li><li><p>Ultrasound scans performed by certified midwives.</p></li><li><p>Distribution of vital maternal vitamins and iron supplements.</p></li></ul><p>The mobile clinic will visit underserved urban neighborhoods three times a week.</p>`,
+      category: "Healthcare",
+      coverImage: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-07-04"),
+      viewsCount: 1750,
+    },
+    {
+      slug: "sustainable-farming-workshop-benin",
+      title: "Press Release: Eco-Friendly Agricultural Workshop Empowers 300 Farmers",
+      excerpt: "ABOI NGO concludes its intensive 4-week sustainable agricultural training for smallholder farming collectives.",
+      content: `<p><strong>COTONOU, BENIN</strong> — ABOI NGO is pleased to announce the successful conclusion of the 2026 Sustainable Farming Workshop, empowering 300 smallholder farmers with organic soil enhancement techniques and climate-resilient crop management.</p><h2>Program Outcomes</h2><ul><li><p>Distribution of 5,000 drought-resistant seed packages.</p></li><li><p>Hands-on drip irrigation installation workshops.</p></li><li><p>Direct linking of farming cooperatives to urban markets.</p></li></ul><p>Sustainable agriculture ensures food security while preserving the natural ecosystem for future generations.</p>`,
+      category: "Press Releases",
+      coverImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-06-25"),
+      viewsCount: 3100,
+    },
+    {
+      slug: "youth-digital-skills-bootcamp-2026",
+      title: "Empowering 200 Youth through Free Digital Skills & Coding Bootcamp",
+      excerpt: "Young adults complete a 3-month intensive web development and digital literacy course organized by ABOI NGO.",
+      content: `<p>Bridging the digital divide is central to ABOI NGO's educational mandate. Today marked the graduation of 200 young adults who completed our intensive 12-week technology bootcamp.</p><h2>Curriculum & Accomplishments</h2><ul><li><p>HTML, CSS, JavaScript, and Web Development fundamentals.</p></li><li><p>Digital marketing and freelance platform onboarding.</p></li><li><p>Career readiness and interview preparation.</p></li></ul><p>Graduates gained practical expertise positioning them for employment and remote freelance opportunities.</p>`,
+      category: "Education",
+      coverImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-06-14"),
+      viewsCount: 1640,
+    },
+    {
+      slug: "disaster-relief-distribution-flood-season",
+      title: "Emergency Relief Flood Response Reaches Affected Households",
+      excerpt: "Providing emergency shelter materials, dry rations, and hygiene kits to families affected by recent seasonal flooding.",
+      content: `<p>Following heavy seasonal rainfall, ABOI NGO's rapid response teams dispatched emergency aid packages to over 450 displaced families in vulnerable coastal areas.</p><h2>Relief Package Contents</h2><ul><li><p>Waterproof tarpaulins and heavy blankets.</p></li><li><p>Emergency food rations (rice, oil, grains, canned food).</p></li><li><p>Hygiene kits and water purification tablets.</p></li></ul><p>Our relief teams will remain on the ground assisting local municipal authorities with ongoing recovery efforts.</p>`,
+      category: "Social Impact",
+      coverImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-05-30"),
+      viewsCount: 2490,
+    },
+    {
+      slug: "waqf-endowment-fund-expansion",
+      title: "Official Statement: ABOI NGO Expands Perpetual Waqf Endowment Fund",
+      excerpt: "Announcement of new community assets dedicated to funding perpetual educational and social development programs.",
+      content: `<p>ABOI NGO is honored to announce the expansion of its institutional Waqf Endowment Fund. Dedicated assets will generate perpetual revenue streams to fund scholarship grants, healthcare centers, and orphan support programs for generations to come.</p><blockquote>Waqf ensures that community investment delivers continuous, everlasting benefit to society.</blockquote><p>We invite philanthropic partners to contribute to perpetual endowment assets that secure the future of our communities.</p>`,
+      category: "Press Releases",
+      coverImage: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb9?auto=format&fit=crop&q=80&w=1200",
+      status: PostStatus.PUBLISHED,
+      authorId: admin.id,
+      publishedAt: new Date("2026-05-18"),
       viewsCount: 3890,
     },
   ];

@@ -46,6 +46,7 @@ model BlogPost {
   excerpt     String?
   content     String
   coverImage  String?
+  category    String     @default("Social Impact")
   status      PostStatus @default(DRAFT)
   authorId    String
   author      AdminUser  @relation(fields: [authorId], references: [id])

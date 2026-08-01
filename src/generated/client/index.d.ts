@@ -2732,6 +2732,7 @@ export namespace Prisma {
     excerpt: string | null
     content: string | null
     coverImage: string | null
+    category: string | null
     status: $Enums.PostStatus | null
     authorId: string | null
     viewsCount: number | null
@@ -2747,6 +2748,7 @@ export namespace Prisma {
     excerpt: string | null
     content: string | null
     coverImage: string | null
+    category: string | null
     status: $Enums.PostStatus | null
     authorId: string | null
     viewsCount: number | null
@@ -2762,6 +2764,7 @@ export namespace Prisma {
     excerpt: number
     content: number
     coverImage: number
+    category: number
     status: number
     authorId: number
     viewsCount: number
@@ -2787,6 +2790,7 @@ export namespace Prisma {
     excerpt?: true
     content?: true
     coverImage?: true
+    category?: true
     status?: true
     authorId?: true
     viewsCount?: true
@@ -2802,6 +2806,7 @@ export namespace Prisma {
     excerpt?: true
     content?: true
     coverImage?: true
+    category?: true
     status?: true
     authorId?: true
     viewsCount?: true
@@ -2817,6 +2822,7 @@ export namespace Prisma {
     excerpt?: true
     content?: true
     coverImage?: true
+    category?: true
     status?: true
     authorId?: true
     viewsCount?: true
@@ -2919,6 +2925,7 @@ export namespace Prisma {
     excerpt: string | null
     content: string
     coverImage: string | null
+    category: string
     status: $Enums.PostStatus
     authorId: string
     viewsCount: number
@@ -2953,6 +2960,7 @@ export namespace Prisma {
     excerpt?: boolean
     content?: boolean
     coverImage?: boolean
+    category?: boolean
     status?: boolean
     authorId?: boolean
     viewsCount?: boolean
@@ -2969,6 +2977,7 @@ export namespace Prisma {
     excerpt?: boolean
     content?: boolean
     coverImage?: boolean
+    category?: boolean
     status?: boolean
     authorId?: boolean
     viewsCount?: boolean
@@ -2985,6 +2994,7 @@ export namespace Prisma {
     excerpt?: boolean
     content?: boolean
     coverImage?: boolean
+    category?: boolean
     status?: boolean
     authorId?: boolean
     viewsCount?: boolean
@@ -3001,6 +3011,7 @@ export namespace Prisma {
     excerpt?: boolean
     content?: boolean
     coverImage?: boolean
+    category?: boolean
     status?: boolean
     authorId?: boolean
     viewsCount?: boolean
@@ -3009,7 +3020,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type BlogPostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "slug" | "excerpt" | "content" | "coverImage" | "status" | "authorId" | "viewsCount" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["blogPost"]>
+  export type BlogPostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "slug" | "excerpt" | "content" | "coverImage" | "category" | "status" | "authorId" | "viewsCount" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["blogPost"]>
   export type BlogPostInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     author?: boolean | AdminUserDefaultArgs<ExtArgs>
   }
@@ -3032,6 +3043,7 @@ export namespace Prisma {
       excerpt: string | null
       content: string
       coverImage: string | null
+      category: string
       status: $Enums.PostStatus
       authorId: string
       viewsCount: number
@@ -3468,6 +3480,7 @@ export namespace Prisma {
     readonly excerpt: FieldRef<"BlogPost", 'String'>
     readonly content: FieldRef<"BlogPost", 'String'>
     readonly coverImage: FieldRef<"BlogPost", 'String'>
+    readonly category: FieldRef<"BlogPost", 'String'>
     readonly status: FieldRef<"BlogPost", 'PostStatus'>
     readonly authorId: FieldRef<"BlogPost", 'String'>
     readonly viewsCount: FieldRef<"BlogPost", 'Int'>
@@ -10258,6 +10271,7 @@ export namespace Prisma {
     excerpt: 'excerpt',
     content: 'content',
     coverImage: 'coverImage',
+    category: 'category',
     status: 'status',
     authorId: 'authorId',
     viewsCount: 'viewsCount',
@@ -10566,6 +10580,7 @@ export namespace Prisma {
     excerpt?: StringNullableFilter<"BlogPost"> | string | null
     content?: StringFilter<"BlogPost"> | string
     coverImage?: StringNullableFilter<"BlogPost"> | string | null
+    category?: StringFilter<"BlogPost"> | string
     status?: EnumPostStatusFilter<"BlogPost"> | $Enums.PostStatus
     authorId?: StringFilter<"BlogPost"> | string
     viewsCount?: IntFilter<"BlogPost"> | number
@@ -10582,6 +10597,7 @@ export namespace Prisma {
     excerpt?: SortOrderInput | SortOrder
     content?: SortOrder
     coverImage?: SortOrderInput | SortOrder
+    category?: SortOrder
     status?: SortOrder
     authorId?: SortOrder
     viewsCount?: SortOrder
@@ -10601,6 +10617,7 @@ export namespace Prisma {
     excerpt?: StringNullableFilter<"BlogPost"> | string | null
     content?: StringFilter<"BlogPost"> | string
     coverImage?: StringNullableFilter<"BlogPost"> | string | null
+    category?: StringFilter<"BlogPost"> | string
     status?: EnumPostStatusFilter<"BlogPost"> | $Enums.PostStatus
     authorId?: StringFilter<"BlogPost"> | string
     viewsCount?: IntFilter<"BlogPost"> | number
@@ -10617,6 +10634,7 @@ export namespace Prisma {
     excerpt?: SortOrderInput | SortOrder
     content?: SortOrder
     coverImage?: SortOrderInput | SortOrder
+    category?: SortOrder
     status?: SortOrder
     authorId?: SortOrder
     viewsCount?: SortOrder
@@ -10640,6 +10658,7 @@ export namespace Prisma {
     excerpt?: StringNullableWithAggregatesFilter<"BlogPost"> | string | null
     content?: StringWithAggregatesFilter<"BlogPost"> | string
     coverImage?: StringNullableWithAggregatesFilter<"BlogPost"> | string | null
+    category?: StringWithAggregatesFilter<"BlogPost"> | string
     status?: EnumPostStatusWithAggregatesFilter<"BlogPost"> | $Enums.PostStatus
     authorId?: StringWithAggregatesFilter<"BlogPost"> | string
     viewsCount?: IntWithAggregatesFilter<"BlogPost"> | number
@@ -11132,6 +11151,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     viewsCount?: number
     publishedAt?: Date | string | null
@@ -11147,6 +11167,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     authorId: string
     viewsCount?: number
@@ -11162,6 +11183,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     viewsCount?: IntFieldUpdateOperationsInput | number
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -11177,6 +11199,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     authorId?: StringFieldUpdateOperationsInput | string
     viewsCount?: IntFieldUpdateOperationsInput | number
@@ -11192,6 +11215,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     authorId: string
     viewsCount?: number
@@ -11207,6 +11231,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     viewsCount?: IntFieldUpdateOperationsInput | number
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -11221,6 +11246,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     authorId?: StringFieldUpdateOperationsInput | string
     viewsCount?: IntFieldUpdateOperationsInput | number
@@ -11862,6 +11888,7 @@ export namespace Prisma {
     excerpt?: SortOrder
     content?: SortOrder
     coverImage?: SortOrder
+    category?: SortOrder
     status?: SortOrder
     authorId?: SortOrder
     viewsCount?: SortOrder
@@ -11881,6 +11908,7 @@ export namespace Prisma {
     excerpt?: SortOrder
     content?: SortOrder
     coverImage?: SortOrder
+    category?: SortOrder
     status?: SortOrder
     authorId?: SortOrder
     viewsCount?: SortOrder
@@ -11896,6 +11924,7 @@ export namespace Prisma {
     excerpt?: SortOrder
     content?: SortOrder
     coverImage?: SortOrder
+    category?: SortOrder
     status?: SortOrder
     authorId?: SortOrder
     viewsCount?: SortOrder
@@ -12661,6 +12690,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     viewsCount?: number
     publishedAt?: Date | string | null
@@ -12675,6 +12705,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     viewsCount?: number
     publishedAt?: Date | string | null
@@ -12758,6 +12789,7 @@ export namespace Prisma {
     excerpt?: StringNullableFilter<"BlogPost"> | string | null
     content?: StringFilter<"BlogPost"> | string
     coverImage?: StringNullableFilter<"BlogPost"> | string | null
+    category?: StringFilter<"BlogPost"> | string
     status?: EnumPostStatusFilter<"BlogPost"> | $Enums.PostStatus
     authorId?: StringFilter<"BlogPost"> | string
     viewsCount?: IntFilter<"BlogPost"> | number
@@ -12928,6 +12960,7 @@ export namespace Prisma {
     excerpt?: string | null
     content: string
     coverImage?: string | null
+    category?: string
     status?: $Enums.PostStatus
     viewsCount?: number
     publishedAt?: Date | string | null
@@ -12957,6 +12990,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     viewsCount?: IntFieldUpdateOperationsInput | number
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -12971,6 +13005,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     viewsCount?: IntFieldUpdateOperationsInput | number
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -12985,6 +13020,7 @@ export namespace Prisma {
     excerpt?: NullableStringFieldUpdateOperationsInput | string | null
     content?: StringFieldUpdateOperationsInput | string
     coverImage?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: StringFieldUpdateOperationsInput | string
     status?: EnumPostStatusFieldUpdateOperationsInput | $Enums.PostStatus
     viewsCount?: IntFieldUpdateOperationsInput | number
     publishedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null

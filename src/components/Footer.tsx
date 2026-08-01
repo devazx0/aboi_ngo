@@ -43,11 +43,11 @@ export async function Footer() {
             {t("contactUs")}
           </h3>
           <ul className="space-y-xs font-body-md text-body-md text-on-tertiary-container">
-            <li className="flex items-center gap-xs">
-              <span className="material-symbols-outlined text-[18px]">
+            <li className="flex items-start gap-xs">
+              <span className="material-symbols-outlined text-[18px] mt-0.5">
                 location_on
               </span>
-              {t("location")}
+              <span>{t("location")}</span>
             </li>
             <li className="flex items-center gap-xs">
               <span className="material-symbols-outlined text-[18px]">

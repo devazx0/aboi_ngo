@@ -23,6 +23,7 @@ export default function AdminBlogEditPage({ params }: { params: Promise<{ id: st
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [status, setStatus] = useState("Draft");
+  const [category, setCategory] = useState("Social Impact");
   const [coverImage, setCoverImage] = useState("");
   const [isUploadingCover, setIsUploadingCover] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -34,6 +35,7 @@ export default function AdminBlogEditPage({ params }: { params: Promise<{ id: st
       setTitle(postData.title || "");
       setContent(postData.content || "");
       setStatus(postData.status === "PUBLISHED" ? "Published" : "Draft");
+      setCategory(postData.category || "Social Impact");
       setCoverImage(postData.coverImage || "");
     }
   }, [postData]);
@@ -90,7 +92,7 @@ export default function AdminBlogEditPage({ params }: { params: Promise<{ id: st
       return;
     }
 
-    const payload = { title: title.trim(), content, coverImage: coverImage.trim(), status };
+    const payload = { title: title.trim(), content, coverImage: coverImage.trim(), category, status };
 
     if (isNew) {
       createMutation.mutate(payload, {
@@ -225,6 +227,29 @@ export default function AdminBlogEditPage({ params }: { params: Promise<{ id: st
             {fieldErrors.title && (
               <p className="text-xs text-error font-medium px-1 mt-1.5">{fieldErrors.title}</p>
             )}
+          </div>
+
+          {/* Category selector */}
+          <div>
+            <label className="block text-sm font-medium text-on-surface mb-2">
+              Category
+            </label>
+            <div className="relative">
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="appearance-none w-full bg-surface border border-outline text-on-surface rounded-lg pl-4 pr-10 py-3 text-base focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer transition-all"
+              >
+                <option value="Social Impact">Social Impact</option>
+                <option value="Education">Education</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Press Releases">Press Releases</option>
+              </select>
+              <ChevronDown
+                size={16}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none"
+              />
+            </div>
           </div>
 
           {/* Cover image with Gallery & Supabase Upload */}

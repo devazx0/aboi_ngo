@@ -85,6 +85,10 @@ export default function ContactPage() {
                   icon: "schedule",
                   key: "officeHours",
                 },
+                {
+                  icon: "badge",
+                  key: "ifu",
+                },
               ].map((item) => (
                 <div key={item.key} className="flex items-center gap-sm">
                   <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-container shrink-0">

@@ -1,3 +1,4 @@
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getAdminAuthSession } from "@/lib/auth";
@@ -24,6 +25,7 @@ export async function GET(request: Request) {
       where.OR = [
         { title: { contains: search, mode: "insensitive" } },
         { excerpt: { contains: search, mode: "insensitive" } },
+        { category: { contains: search, mode: "insensitive" } },
       ];
     }
     if (status && Object.values(PostStatus).includes(status as PostStatus)) {
@@ -59,7 +61,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { title, content, excerpt, coverImage, status } = body;
+    const { title, content, excerpt, coverImage, category, status } = body;
 
     if (!title || !content) {
       return NextResponse.json(
@@ -88,11 +90,18 @@ export async function POST(request: Request) {
         content,
         excerpt: excerpt || title.slice(0, 150),
         coverImage: coverImage || null,
+        category: category || "Social Impact",
         status: postStatus,
         authorId: session.userId,
         publishedAt: postStatus === PostStatus.PUBLISHED ? new Date() : null,
       },
     });
+
+    if (postStatus === PostStatus.PUBLISHED) {
+      revalidateTag("news-articles", "max");
+      revalidatePath("/news", "page");
+      revalidatePath(`/news/${post.slug}`, "page");
+    }
 
     return NextResponse.json({ success: true, post }, { status: 201 });
   } catch (error: any) {
