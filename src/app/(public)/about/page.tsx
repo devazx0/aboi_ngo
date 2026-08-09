@@ -110,7 +110,7 @@ export default async function AboutPage() {
           <div className="aspect-[3/4] rounded-lg overflow-hidden relative shadow-md">
             <img
               className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1JdwF2G23UF3KfQDT5RgOcaKni7-jgknZ72zY12_HqNQI-APeDDYSUoyLbovWODfXIcJrZDaE2h_PkEPEL1xKd0-CMQNzSF_cFe_GqLzoaZPX0-RP1gkErE7f5rUgZC69iywLUtNLczQHHiornXigUuDEoiKeDGAnDsRe6amiOatga3f-Bs-xcX7t7CPzN8kHm-Hgwm3LTCfQZE-byhnOwCcblDqvP6MjGVaj81m4_dIjfVauRZVSewSc7va0RYQBqpv4htTMjc"
+              src="/assets/men_in_front_of_mosque.png"
               alt={t("presidentImgAlt")}
             />
           </div>
@@ -135,6 +135,62 @@ export default async function AboutPage() {
             </h3>
             <p className="text-sm text-outline">{t("presidentRole")}</p>
           </div>
+        </div>
+      </section>
+
+      {/* Field Operations Gallery */}
+      <section className="py-lg">
+        <div className="text-center mb-lg">
+          <h2 className="font-headline-md text-headline-md text-primary mb-xs">
+            Field Operations & Community Outreach
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+            Direct snapshots from our humanitarian initiatives, clean water drives, and solidarity programs across Benin.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-md">
+          {[
+            {
+              src: "/assets/3-woman-serving-food.jpeg",
+              title: "Food Distribution Drive",
+              desc: "Serving meals to vulnerable families",
+            },
+            {
+              src: "/assets/water-tank.jpeg",
+              title: "Clean Water Installation",
+              desc: "Solar water tanks in rural villages",
+            },
+            {
+              src: "/assets/sharing_rice.png",
+              title: "Solidarity Supplies",
+              desc: "Distributing essential grains & rice",
+            },
+            {
+              src: "/assets/prayer_2.png",
+              title: "Spiritual Gathering",
+              desc: "Promoting community peace & cohesion",
+            },
+          ].map((item) => (
+            <div
+              key={item.src}
+              className="group relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-sm bg-surface-container-lowest">
+                <h3 className="font-label-md text-label-md text-on-surface font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-on-surface-variant">{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

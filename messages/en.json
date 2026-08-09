@@ -36,6 +36,14 @@
     "ourPillars": "Our 4 Pillars",
     "pillarsSubtitle": "The foundation of our comprehensive community development strategy.",
     "learnMore": "Learn More",
+    "pillar1Title": "Religious & Cohesion",
+    "pillar1Desc": "Fostering deep-rooted peace and mutual understanding across diverse communities.",
+    "pillar2Title": "Social & Solidarity",
+    "pillar2Desc": "Empowering vulnerable populations through targeted economic and social support.",
+    "pillar3Title": "Educational & Scientific",
+    "pillar3Desc": "Advancing knowledge and scientific excellence for the next generation of leaders.",
+    "pillar4Title": "Health & Environmental",
+    "pillar4Desc": "Promoting holistic well-being and ecological sustainability grounded in Islamic ethics.",
     "orthodoxy": "Orthodoxy",
     "studentsSupported": "Students Supported",
     "familiesAssisted": "Families Assisted",
@@ -80,7 +88,35 @@
     "title": "A global impact through four strategic pillars",
     "subtitle": "Our mission is structured around four interconnected areas, allowing us to respond holistically to the spiritual, social, educational, and environmental needs of our communities.",
     "keyObjectives": "Key Objectives",
-    "concreteActions": "Concrete Actions"
+    "concreteActions": "Concrete Actions",
+    "religiousTitle": "Religious Plan",
+    "religiousSubtitle": "Awakening & Peace",
+    "religiousDesc": "Fostering spiritual growth and promoting peaceful coexistence through religious education, dialogue, and the construction of spaces for worship and community gathering.",
+    "objLiteracy": "Promote religious literacy",
+    "objHarmony": "Foster interfaith harmony",
+    "actMosques": "Build community mosques",
+    "actSeminars": "Organize peace seminars",
+    "socialTitle": "Social Plan",
+    "socialSubtitle": "Charity & Waqf",
+    "socialDesc": "Providing immediate relief to vulnerable populations while establishing sustainable charitable endowments (Waqf) to ensure long-term community support and economic empowerment.",
+    "objPoverty": "Eradicate extreme poverty",
+    "objOrphans": "Support orphans & widows",
+    "actFood": "Food distribution drives",
+    "actWaqf": "Establish Waqf properties",
+    "eduTitle": "Educational Plan",
+    "eduSubtitle": "Knowledge & Digital Daawah",
+    "eduDesc": "Equipping the next generation with both foundational religious knowledge and modern digital skills, bridging the gap between traditional wisdom and contemporary communication.",
+    "objEduLiteracy": "Improve literacy rates",
+    "objDigital": "Promote digital inclusion",
+    "actMadrasas": "Build modern madrasas",
+    "actHubs": "Launch online learning hubs",
+    "healthTitle": "Health & Environmental Plan",
+    "healthSubtitle": "Assistance & Ecology",
+    "healthDesc": "Promoting holistic well-being by providing essential healthcare access and championing sustainable environmental practices to protect our shared planet.",
+    "objWater": "Increase access to clean water",
+    "objFarming": "Promote sustainable farming",
+    "actWells": "Construct borehole wells",
+    "actCamps": "Host medical camps"
   },
   "news": {
     "title": "News & Live from the Field",
@@ -152,5 +188,15 @@
     "blog": {
       "title": "Blog Management"
     }
+  },
+  "videos": {
+    "title": "Field Action & Live Reports",
+    "subtitle": "Watch real footage of our food distribution, community kitchens, and relief efforts across Benin.",
+    "video1Title": "Nutritional Relief for Children & Families",
+    "video1Desc": "Volunteers distributing hot meals and food supplies to children in need.",
+    "video2Title": "Community Kitchen & Meals Preparation",
+    "video2Desc": "Local women cooking large-scale rice meals for daily community outreach.",
+    "video3Title": "Solidarity Gatherings & Meals Sharing",
+    "video3Desc": "Community members gathering together to share meals in a spirit of brotherhood."
   }
 }

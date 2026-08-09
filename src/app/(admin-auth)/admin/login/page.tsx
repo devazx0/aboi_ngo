@@ -55,7 +55,20 @@ export default function AdminLoginPage() {
           router.refresh();
         },
         onError: (err: any) => {
-          setErrorMsg(err.message || "Invalid email or password credentials.");
+          const msg = err.message || "";
+          if (
+            msg.includes("prisma") ||
+            msg.includes("ENOTFOUND") ||
+            msg.includes("FATAL") ||
+            msg.includes("postgres") ||
+            msg.includes("invocation")
+          ) {
+            setErrorMsg(
+              "Unable to connect to database service. Please check your database connection or try again later."
+            );
+          } else {
+            setErrorMsg(msg || "Invalid email or password credentials.");
+          }
         },
       }
     );

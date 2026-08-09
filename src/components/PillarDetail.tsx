@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 type PillarDetailProps = {
   icon: string;
   title: string;
@@ -21,6 +23,8 @@ export function PillarDetail({
   actions,
   reversed = false,
 }: PillarDetailProps) {
+  const t = useTranslations("pillars");
+
   return (
     <article className="grid grid-cols-1 md:grid-cols-2 gap-xl items-center group">
       <div className={`${reversed ? "order-2 md:order-1" : "order-2 md:order-1"} space-y-md`}>
@@ -48,7 +52,7 @@ export function PillarDetail({
               >
                 flag
               </span>
-              Key Objectives
+              {t("keyObjectives")}
             </h3>
             <ul className="space-y-xs font-body-md text-body-md text-on-surface-variant">
               {objectives.map((obj) => (
@@ -69,7 +73,7 @@ export function PillarDetail({
               >
                 action_key
               </span>
-              Concrete Actions
+              {t("concreteActions")}
             </h3>
             <ul className="space-y-xs font-body-md text-body-md text-on-surface-variant">
               {actions.map((act) => (

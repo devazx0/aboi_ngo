@@ -36,6 +36,14 @@
     "ourPillars": "Nos 4 Piliers",
     "pillarsSubtitle": "Le fondement de notre stratégie globale de développement communautaire.",
     "learnMore": "En savoir plus",
+    "pillar1Title": "Religieux & Cohésion",
+    "pillar1Desc": "Favoriser une paix profonde et une compréhension mutuelle au sein de communautés diverses.",
+    "pillar2Title": "Social & Solidarité",
+    "pillar2Desc": "Autonomiser les populations vulnérables grâce à un soutien économique et social ciblé.",
+    "pillar3Title": "Éducatif & Scientifique",
+    "pillar3Desc": "Faire progresser le savoir et l'excellence scientifique pour la prochaine génération de leaders.",
+    "pillar4Title": "Santé & Environnement",
+    "pillar4Desc": "Promouvoir le bien-être holistique et la durabilité écologique fondés sur l'éthique islamique.",
     "orthodoxy": "Orthodoxie",
     "studentsSupported": "Étudiants Soutenus",
     "familiesAssisted": "Familles Assistées",
@@ -80,7 +88,35 @@
     "title": "Un impact global à travers quatre piliers stratégiques",
     "subtitle": "Notre mission est structurée autour de quatre domaines interconnectés, nous permettant de répondre de manière holistique aux besoins spirituels, sociaux, éducatifs et environnementaux de nos communautés.",
     "keyObjectives": "Objectifs clés",
-    "concreteActions": "Actions concrètes"
+    "concreteActions": "Actions concrètes",
+    "religiousTitle": "Volet Religieux",
+    "religiousSubtitle": "Éveil & Paix",
+    "religiousDesc": "Favoriser la croissance spirituelle et promouvoir la coexistence paisible par l'éducation religieuse, le dialogue et la construction d'espaces de culte et de rassemblement.",
+    "objLiteracy": "Promouvoir l'alphabétisation religieuse",
+    "objHarmony": "Favoriser l'harmonie interreligieuse",
+    "actMosques": "Construire des mosquées communautaires",
+    "actSeminars": "Organiser des séminaires sur la paix",
+    "socialTitle": "Volet Social",
+    "socialSubtitle": "Charité & Waqf",
+    "socialDesc": "Apporter un soulagement immédiat aux populations vulnérables tout en établissant des dotations charitables durables (Waqf) pour assurer un soutien communautaire à long terme et l'autonomisation économique.",
+    "objPoverty": "Éradiquer l'extrême pauvreté",
+    "objOrphans": "Soutenir les orphelins et les veuves",
+    "actFood": "Campagnes de distribution alimentaire",
+    "actWaqf": "Établir des propriétés Waqf",
+    "eduTitle": "Volet Éducatif",
+    "eduSubtitle": "Savoir & Daawah Numérique",
+    "eduDesc": "Doter la prochaine génération de connaissances religieuses fondamentales et de compétences numériques modernes, en comblant le fossé entre sagesse traditionnelle et communication contemporaine.",
+    "objEduLiteracy": "Améliorer les taux d'alphabétisation",
+    "objDigital": "Promouvoir l'inclusion numérique",
+    "actMadrasas": "Construire des madrasas modernes",
+    "actHubs": "Lancer des plateformes d'apprentissage en ligne",
+    "healthTitle": "Volet Santé & Environnement",
+    "healthSubtitle": "Assistance & Écologie",
+    "healthDesc": "Promouvoir le bien-être holistique en fournissant un accès aux soins de santé essentiels et en défendant des pratiques environnementales durables pour protéger notre planète commune.",
+    "objWater": "Augmenter l'accès à l'eau potable",
+    "objFarming": "Promouvoir l'agriculture durable",
+    "actWells": "Construire des puits et forages",
+    "actCamps": "Organiser des camps médicaux"
   },
   "news": {
     "title": "Actualités & Terrains",
@@ -152,5 +188,15 @@
     "blog": {
       "title": "Gestion du blogue"
     }
+  },
+  "videos": {
+    "title": "Actions sur le Terrain & Directs",
+    "subtitle": "Regardez les vraies images de nos distributions alimentaires, cuisines communautaires et actions de secours au Bénin.",
+    "video1Title": "Aide Alimentaire pour Enfants & Familles",
+    "video1Desc": "Des bénévoles distribuant des repas chauds et vivres aux enfants dans le besoin.",
+    "video2Title": "Cuisine Communautaire & Préparation des Repas",
+    "video2Desc": "Femmes locales préparant de grands repas de riz pour l'entraide communautaire quotidienne.",
+    "video3Title": "Rassemblements de Solidarité & Partage de Repas",
+    "video3Desc": "Membres de la communauté réunis pour partager des repas dans un esprit de fraternité."
   }
 }

@@ -4,45 +4,7 @@ import { SectionIntro } from "@/components/SectionIntro";
 import { PillarCard } from "@/components/PillarCard";
 import { NewsCard } from "@/components/NewsCard";
 import { HeroSlider } from "@/components/HeroSlider";
-
-const PILLARS = [
-  {
-    icon: "diversity_3",
-    title: "Religious & Cohesion",
-    description:
-      "Fostering deep-rooted peace and mutual understanding across diverse communities.",
-    href: "/pillars",
-    accentColor: "primary" as const,
-    blurColor: "rgba(176, 240, 214, 0.2)",
-  },
-  {
-    icon: "handshake",
-    title: "Social & Solidarity",
-    description:
-      "Empowering vulnerable populations through targeted economic and social support.",
-    href: "/pillars",
-    accentColor: "secondary" as const,
-    blurColor: "rgba(255, 220, 195, 0.3)",
-  },
-  {
-    icon: "school",
-    title: "Educational & Scientific",
-    description:
-      "Advancing knowledge and scientific excellence for the next generation of leaders.",
-    href: "/pillars",
-    accentColor: "tertiary" as const,
-    blurColor: "rgba(220, 226, 247, 0.3)",
-  },
-  {
-    icon: "eco",
-    title: "Health & Environmental",
-    description:
-      "Promoting holistic well-being and ecological sustainability grounded in Islamic ethics.",
-    href: "/pillars",
-    accentColor: "primary" as const,
-    blurColor: "rgba(149, 211, 186, 0.3)",
-  },
-];
+import { ImpactVideoSection } from "@/components/ImpactVideoSection";
 
 const NEWS_ITEMS = [
   {
@@ -61,9 +23,8 @@ const NEWS_ITEMS = [
     title: "Annual Science Excellence Awards 2024",
     description:
       "Celebrating outstanding academic achievements of over 500 scholars supported by the NGO-ABOI educational fund.",
-    imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBd-flc18dXtmL_TZ-v5ZHmQBQO5VGJzvg-ux5q1blNXpiXYUUeA6Puw-wcSE4OKm1tOS8mA94ApVF6NjsAa0XRwQPuMCW9W6neKE_R0XkkGkIQCkohUpTy71-GpFwqqYzkXgcgez1BzmJOaQfhTqxTloV7cCUPBcjWrgHHXbRXGw8j8v7rq9zs6zmbWBRpHsaRr3BGIOysfWeGukS_j462AG53fY_jMO63BPD7-5ugk067bvPjxwVq9HBGXFLZOJUI7YaW-NNlxZE",
-    imageAlt: "Students in a modern classroom",
+    imageUrl: "/assets/3-woman-serving-food.jpeg",
+    imageAlt: "Volunteers serving food to scholars and community",
     href: "#",
   },
   {
@@ -80,6 +41,41 @@ const NEWS_ITEMS = [
 
 export default async function HomePage() {
   const t = await getTranslations("home");
+
+  const PILLARS = [
+    {
+      icon: "diversity_3",
+      title: t("pillar1Title"),
+      description: t("pillar1Desc"),
+      href: "/pillars",
+      accentColor: "primary" as const,
+      blurColor: "rgba(176, 240, 214, 0.2)",
+    },
+    {
+      icon: "handshake",
+      title: t("pillar2Title"),
+      description: t("pillar2Desc"),
+      href: "/pillars",
+      accentColor: "secondary" as const,
+      blurColor: "rgba(255, 220, 195, 0.3)",
+    },
+    {
+      icon: "school",
+      title: t("pillar3Title"),
+      description: t("pillar3Desc"),
+      href: "/pillars",
+      accentColor: "tertiary" as const,
+      blurColor: "rgba(220, 226, 247, 0.3)",
+    },
+    {
+      icon: "eco",
+      title: t("pillar4Title"),
+      description: t("pillar4Desc"),
+      href: "/pillars",
+      accentColor: "primary" as const,
+      blurColor: "rgba(149, 211, 186, 0.3)",
+    },
+  ];
 
   return (
     <>
@@ -165,6 +161,9 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Real Field Action Videos */}
+      <ImpactVideoSection />
 
       {/* Latest News */}
       <section className="py-xl bg-surface">

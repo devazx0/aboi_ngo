@@ -53,7 +53,7 @@ export async function POST(request: Request) {
   } catch (error: any) {
     console.error("Login API Error:", error);
     return NextResponse.json(
-      { error: error?.message || "Internal server login error." },
+      { error: "Unable to connect to database service. Please check database connection or try again later." },
       { status: 500 }
     );
   }
