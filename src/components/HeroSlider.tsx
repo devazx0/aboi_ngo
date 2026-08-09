@@ -156,24 +156,12 @@ export function HeroSlider({
                   isActive ? "scale-105" : "scale-100"
                 }`}
               />
-              {/* Multiplex Overlay Gradients */}
-              <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface via-primary/40 to-primary/60 opacity-90" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
+              {/* Subtle Overlay for Image Clarity & Text Legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/35" />
             </div>
           );
         })}
       </div>
-
-      {/* Slide Badge Pill */}
-      {activeSlides[currentIndex]?.badge && (
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 transition-all duration-500 animate-fade-in">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-surface-container-lowest bg-primary-container/80 backdrop-blur-md border border-white/20 shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse" />
-            {activeSlides[currentIndex].badge}
-          </span>
-        </div>
-      )}
 
       {/* Hero Content */}
       <div className="relative z-10 w-full">{children}</div>
