@@ -205,6 +205,67 @@ async function main() {
   }
   console.log(`✅ Seeded ${settings.length} site settings.`);
 
+  // 5. Seed Traffic Analytics PageVisits (if empty or few records)
+  const existingVisitsCount = await prisma.pageVisit.count();
+  if (existingVisitsCount < 10) {
+    console.log("🌱 Seeding realistic traffic analytics data...");
+    const sampleCountries = [
+      { country: "Benin", countryCode: "BJ", continent: "Africa", weight: 45 },
+      { country: "France", countryCode: "FR", continent: "Europe", weight: 25 },
+      { country: "Nigeria", countryCode: "NG", continent: "Africa", weight: 15 },
+      { country: "United States", countryCode: "US", continent: "North America", weight: 10 },
+      { country: "Togo", countryCode: "TG", continent: "Africa", weight: 5 },
+    ];
+    const samplePaths = ["/", "/about", "/pillars/education", "/pillars/health", "/blog", "/contact"];
+    const ipPool = Array.from({ length: 45 }, (_, idx) => `hashed_ip_visitor_${idx + 1}`);
+
+    const now = new Date();
+    const visitsData = [];
+
+    // Generate visits spread across the last 6 months
+    for (let monthOffset = 5; monthOffset >= 0; monthOffset--) {
+      const monthlyVisitCount = 40 + (5 - monthOffset) * 15;
+      for (let i = 0; i < monthlyVisitCount; i++) {
+        const date = new Date(
+          now.getFullYear(),
+          now.getMonth() - monthOffset,
+          Math.floor(Math.random() * 28) + 1,
+          Math.floor(Math.random() * 24),
+          Math.floor(Math.random() * 60)
+        );
+
+        const rand = Math.random() * 100;
+        let cumulative = 0;
+        let chosenGeo = sampleCountries[0];
+        for (const geo of sampleCountries) {
+          cumulative += geo.weight;
+          if (rand <= cumulative) {
+            chosenGeo = geo;
+            break;
+          }
+        }
+
+        const path = samplePaths[Math.floor(Math.random() * samplePaths.length)];
+        const ipHash = ipPool[Math.floor(Math.random() * ipPool.length)];
+
+        visitsData.push({
+          path,
+          ipHash,
+          country: chosenGeo.country,
+          countryCode: chosenGeo.countryCode,
+          continent: chosenGeo.continent,
+          userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+          visitedAt: date,
+        });
+      }
+    }
+
+    await prisma.pageVisit.createMany({
+      data: visitsData,
+    });
+    console.log(`✅ Seeded ${visitsData.length} traffic page visits.`);
+  }
+
   console.log("🎉 Database seed complete!");
 }
 
