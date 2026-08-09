@@ -12,7 +12,7 @@ export default function AdminSettingsPage() {
 
   const [orgName, setOrgName] = useState("ABOI NGO");
   const [contactEmail, setContactEmail] = useState("contact@aboi-ngo.org");
-  const [contactPhone, setContactPhone] = useState("+229 97 00 00 00");
+  const [contactPhone, setContactPhone] = useState("+229 0197294351 / 0164962217");
   const [maintenanceMode, setMaintenanceMode] = useState(false);
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);

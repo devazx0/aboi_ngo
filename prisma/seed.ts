@@ -192,7 +192,7 @@ async function main() {
   const settings = [
     { key: "org_name", value: "ABOI NGO" },
     { key: "contact_email", value: "contact@aboi-ngo.org" },
-    { key: "contact_phone", value: "+229 97 00 00 00" },
+    { key: "contact_phone", value: "+229 0197294351 / 0164962217" },
     { key: "maintenance_mode", value: "false" },
   ];
 
