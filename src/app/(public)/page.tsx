@@ -1,43 +1,9 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { SectionIntro } from "@/components/SectionIntro";
 import { PillarCard } from "@/components/PillarCard";
 import { NewsCard } from "@/components/NewsCard";
 import { HeroSlider } from "@/components/HeroSlider";
 import { ImpactVideoSection } from "@/components/ImpactVideoSection";
-
-const NEWS_ITEMS = [
-  {
-    category: "Health",
-    date: "Oct 15, 2026",
-    title: "Clean Water Initiative Reaches 10 New Villages",
-    description:
-      "Our latest ecological health drive successfully installed solar-powered water filtration systems in rural communities.",
-    imageUrl: "/assets/water_tank.png",
-    imageAlt: "Water tank providing clean water",
-    href: "#",
-  },
-  {
-    category: "Education",
-    date: "Oct 02, 2026",
-    title: "Annual Science Excellence Awards 2024",
-    description:
-      "Celebrating outstanding academic achievements of over 500 scholars supported by the NGO-ABOI educational fund.",
-    imageUrl: "/assets/3-woman-serving-food.jpeg",
-    imageAlt: "Volunteers serving food to scholars and community",
-    href: "#",
-  },
-  {
-    category: "Peace",
-    date: "Sep 18, 2026",
-    title: "Interfaith Dialogue for Regional Cohesion",
-    description:
-      "A landmark symposium bringing together community leaders to draft a unified charter for lasting peace and solidarity.",
-    imageUrl: "/assets/prayer.png",
-    imageAlt: "Community in prayer",
-    href: "#",
-  },
-];
 
 export default async function HomePage() {
   const t = await getTranslations("home");
@@ -74,6 +40,36 @@ export default async function HomePage() {
       href: "/pillars",
       accentColor: "primary" as const,
       blurColor: "rgba(149, 211, 186, 0.3)",
+    },
+  ];
+
+  const newsItems = [
+    {
+      category: t("newsItem1Category"),
+      date: t("newsItem1Date"),
+      title: t("newsItem1Title"),
+      description: t("newsItem1Desc"),
+      imageUrl: "/assets/water_tank.png",
+      imageAlt: t("newsItem1Title"),
+      href: "/news/clean-water-initiative-reaches-10-villages",
+    },
+    {
+      category: t("newsItem2Category"),
+      date: t("newsItem2Date"),
+      title: t("newsItem2Title"),
+      description: t("newsItem2Desc"),
+      imageUrl: "/assets/3-woman-serving-food.jpeg",
+      imageAlt: t("newsItem2Title"),
+      href: "/news/annual-science-excellence-awards-2026",
+    },
+    {
+      category: t("newsItem3Category"),
+      date: t("newsItem3Date"),
+      title: t("newsItem3Title"),
+      description: t("newsItem3Desc"),
+      imageUrl: "/assets/prayer.png",
+      imageAlt: t("newsItem3Title"),
+      href: "/news/interfaith-symposium-regional-cohesion",
     },
   ];
 
@@ -185,7 +181,7 @@ export default async function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
-            {NEWS_ITEMS.map((item) => (
+            {newsItems.map((item) => (
               <NewsCard key={item.title} {...item} />
             ))}
           </div>

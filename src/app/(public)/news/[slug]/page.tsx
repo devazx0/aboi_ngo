@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { unstable_cache } from "next/cache";
+import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { PostStatus } from "@/generated/client";
 
@@ -69,6 +70,7 @@ export default async function NewsDetailPage({
 }) {
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
+  const t = await getTranslations("news");
 
   if (!post) {
     notFound();
@@ -93,7 +95,7 @@ export default async function NewsDetailPage({
           <span className="material-symbols-outlined text-[18px]">
             arrow_back
           </span>
-          Back to News
+          {t("backToNews")}
         </Link>
 
         {/* Category & Date */}
@@ -157,7 +159,7 @@ export default async function NewsDetailPage({
             <span className="material-symbols-outlined text-[18px]">
               arrow_back
             </span>
-            Back to all news
+            {t("backToAllNews")}
           </Link>
         </div>
       </div>

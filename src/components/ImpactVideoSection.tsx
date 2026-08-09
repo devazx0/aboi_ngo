@@ -9,7 +9,7 @@ interface VideoItem {
   poster: string;
   titleKey: string;
   descKey: string;
-  badge: string;
+  badgeKey: string;
 }
 
 const VIDEOS: VideoItem[] = [
@@ -19,7 +19,7 @@ const VIDEOS: VideoItem[] = [
     poster: "/assets/3-woman-serving-food.jpeg",
     titleKey: "video1Title",
     descKey: "video1Desc",
-    badge: "Food Relief",
+    badgeKey: "badgeFoodRelief",
   },
   {
     id: "cooking-rice",
@@ -27,7 +27,7 @@ const VIDEOS: VideoItem[] = [
     poster: "/assets/rice.png",
     titleKey: "video2Title",
     descKey: "video2Desc",
-    badge: "Community Kitchen",
+    badgeKey: "badgeCommunityKitchen",
   },
   {
     id: "people-food",
@@ -35,7 +35,7 @@ const VIDEOS: VideoItem[] = [
     poster: "/assets/sharing_rice2.png",
     titleKey: "video3Title",
     descKey: "video3Desc",
-    badge: "Solidarity Gathering",
+    badgeKey: "badgeSolidarityGathering",
   },
 ];
 
@@ -43,10 +43,12 @@ function VideoCard({
   video,
   title,
   desc,
+  badge,
 }: {
   video: VideoItem;
   title: string;
   desc: string;
+  badge: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -127,7 +129,7 @@ function VideoCard({
         {/* Category Badge Pill */}
         <div className="absolute top-3 left-3 pointer-events-none z-10">
           <span className="bg-black/60 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/20">
-            {video.badge}
+            {badge}
           </span>
         </div>
 
@@ -177,7 +179,7 @@ export function ImpactVideoSection() {
             <span className="material-symbols-outlined text-[18px]">
               videocam
             </span>
-            Real Field Action
+            {t("title")}
           </span>
           <h2 className="font-headline-lg text-headline-lg text-on-surface mb-xs">
             {t("title")}
@@ -194,6 +196,7 @@ export function ImpactVideoSection() {
               video={video}
               title={t(video.titleKey)}
               desc={t(video.descKey)}
+              badge={t(video.badgeKey)}
             />
           ))}
         </div>

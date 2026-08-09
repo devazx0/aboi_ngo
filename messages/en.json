@@ -53,7 +53,24 @@
     "viewAllNews": "View all news",
     "ctaTitle": "Join us in making a difference",
     "ctaSubtitle": "Contribute to sustainable impact through our Waqf mechanism. Your partnership ensures continuous support for education, health, and social cohesion.",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "slide1Badge": "Religious & Social Cohesion",
+    "slide2Badge": "Solidarity & Food Security",
+    "slide3Badge": "Health & Environmental Sustainability",
+    "slide4Badge": "Spiritual Unity & Peace",
+    "slide5Badge": "Waqf & Community Empowerment",
+    "newsItem1Category": "Health",
+    "newsItem1Date": "Oct 15, 2026",
+    "newsItem1Title": "Clean Water Initiative Reaches 10 New Villages",
+    "newsItem1Desc": "Our latest ecological health drive successfully installed solar-powered water filtration systems in rural communities.",
+    "newsItem2Category": "Education",
+    "newsItem2Date": "Oct 02, 2026",
+    "newsItem2Title": "Annual Science Excellence Awards 2026",
+    "newsItem2Desc": "Celebrating outstanding academic achievements of over 500 scholars supported by the NGO-ABOI educational fund.",
+    "newsItem3Category": "Peace",
+    "newsItem3Date": "Sep 18, 2026",
+    "newsItem3Title": "Interfaith Dialogue for Regional Cohesion",
+    "newsItem3Desc": "A landmark symposium bringing together community leaders to draft a unified charter for lasting peace and solidarity."
   },
   "about": {
     "title": "Building a future of solidarity, science and peace",
@@ -76,6 +93,17 @@
     "presidentName": "Dr. Amina Oumarou",
     "presidentRole": "President, NGO-ABOI",
     "presidentImgAlt": "Dr. Amina Oumarou, President of NGO-ABOI",
+    "leadershipQuote": "Our strength lies not merely in our resources, but in the unwavering commitment to transparency and the structural integrity of our approach. True solidarity is built on a foundation of measurable impact and rigorous governance.",
+    "galleryTitle": "Field Operations & Community Outreach",
+    "gallerySubtitle": "Direct snapshots from our humanitarian initiatives, clean water drives, and solidarity programs across Benin.",
+    "galleryItem1Title": "Food Distribution Drive",
+    "galleryItem1Desc": "Serving meals to vulnerable families",
+    "galleryItem2Title": "Clean Water Installation",
+    "galleryItem2Desc": "Solar water tanks in rural villages",
+    "galleryItem3Title": "Solidarity Supplies",
+    "galleryItem3Desc": "Distributing essential grains & rice",
+    "galleryItem4Title": "Spiritual Gathering",
+    "galleryItem4Desc": "Promoting community peace & cohesion",
     "transparency": "Institutional Transparency",
     "transparencyText": "We operate with a commitment to clarity, ensuring our structure and impact evaluations are accessible and accountable.",
     "sectorTitle": "Sector-Based Structure",
@@ -129,7 +157,14 @@
     "share": "Share",
     "print": "Print",
     "by": "By",
-    "noArticles": "No articles found."
+    "noArticles": "No articles found.",
+    "catAll": "All",
+    "catSocialImpact": "Social Impact",
+    "catEducation": "Education",
+    "catHealthcare": "Healthcare",
+    "catPressReleases": "Press Releases",
+    "backToNews": "Back to News",
+    "backToAllNews": "Back to all news"
   },
   "contact": {
     "title": "Partnership & Contact",
@@ -166,7 +201,15 @@
     "subjectPlaceholder": "What is this regarding?",
     "message": "Message",
     "messagePlaceholder": "Please describe your proposal or inquiry in detail...",
-    "submitRequest": "Submit Request"
+    "submitRequest": "Submit Request",
+    "optionNgo": "NGO",
+    "optionCorporation": "Corporation",
+    "optionGovernment": "Government",
+    "optionIndividual": "Individual",
+    "subjTechnical": "Technical Partnership Proposal",
+    "subjFinancial": "Financial Contribution Inquiry",
+    "subjWaqf": "Waqf Project Discussion",
+    "subjGeneral": "General Inquiry"
   },
   "Admin": {
     "nav": {
@@ -197,6 +240,9 @@
     "video2Title": "Community Kitchen & Meals Preparation",
     "video2Desc": "Local women cooking large-scale rice meals for daily community outreach.",
     "video3Title": "Solidarity Gatherings & Meals Sharing",
-    "video3Desc": "Community members gathering together to share meals in a spirit of brotherhood."
+    "video3Desc": "Community members gathering together to share meals in a spirit of brotherhood.",
+    "badgeFoodRelief": "Food Relief",
+    "badgeCommunityKitchen": "Community Kitchen",
+    "badgeSolidarityGathering": "Solidarity Gathering"
   }
 }

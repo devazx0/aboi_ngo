@@ -53,7 +53,24 @@
     "viewAllNews": "Voir toutes les actualités",
     "ctaTitle": "Rejoignez-nous pour faire la différence",
     "ctaSubtitle": "Contribuez à un impact durable grâce à notre mécanisme de Waqf. Votre partenariat assure un soutien continu pour l'éducation, la santé et la cohésion sociale.",
-    "contactUs": "Contactez-nous"
+    "contactUs": "Contactez-nous",
+    "slide1Badge": "Cohésion Religieuse & Sociale",
+    "slide2Badge": "Solidarité & Sécurité Alimentaire",
+    "slide3Badge": "Santé & Durabilité Environnementale",
+    "slide4Badge": "Unité Spirituelle & Paix",
+    "slide5Badge": "Waqf & Autonomisation Communautaire",
+    "newsItem1Category": "Santé",
+    "newsItem1Date": "15 Oct. 2026",
+    "newsItem1Title": "L'initiative Eau Propre atteint 10 nouveaux villages",
+    "newsItem1Desc": "Notre dernière action de santé écologique a installé avec succès des systèmes de filtration d'eau solaires dans les communautés rurales.",
+    "newsItem2Category": "Éducation",
+    "newsItem2Date": "02 Oct. 2026",
+    "newsItem2Title": "Prix Annuels d'Excellence Scientifique 2026",
+    "newsItem2Desc": "Célébration des réussites académiques exceptionnelles de plus de 500 boursiers soutenus par le fonds éducatif de l'ONG-ABOI.",
+    "newsItem3Category": "Paix",
+    "newsItem3Date": "18 Sept. 2026",
+    "newsItem3Title": "Dialogue Interreligieux pour la Cohésion Régionale",
+    "newsItem3Desc": "Un symposium fondateur rassemblant les dirigeants communautaires pour rédiger une charte unifiée de paix et de solidarité."
   },
   "about": {
     "title": "Construire un avenir de solidarité, de science et de paix",
@@ -76,12 +93,23 @@
     "presidentName": "Dr. Amina Oumarou",
     "presidentRole": "Présidente, ONG-ABOI",
     "presidentImgAlt": "Dr. Amina Oumarou, Présidente de l'ONG-ABOI",
+    "leadershipQuote": "Notre force ne réside pas seulement dans nos ressources, mais dans l'engagement inébranlable envers la transparence et l'intégrité structurelle de notre approche. La vraie solidarité se bâtit sur un impact mesurable et une gouvernance rigoureuse.",
+    "galleryTitle": "Opérations sur le Terrain & Actions Communautaires",
+    "gallerySubtitle": "Aperçus directs de nos initiatives humanitaires, accès à l'eau potable et programmes de solidarité au Bénin.",
+    "galleryItem1Title": "Distribution Alimentaire",
+    "galleryItem1Desc": "Distribution de repas aux familles vulnérables",
+    "galleryItem2Title": "Installation d'Eau Propre",
+    "galleryItem2Desc": "Châteaux d'eau solaires dans les villages ruraux",
+    "galleryItem3Title": "Fournitures de Solidarité",
+    "galleryItem3Desc": "Distribution de céréales et riz essentiels",
+    "galleryItem4Title": "Rassemblement Spirituel",
+    "galleryItem4Desc": "Promouvoir la paix et la cohésion communautaire",
     "transparency": "Transparence Institutionnelle",
     "transparencyText": "Nous opérons avec un engagement de clarté, garantissant que notre structure et nos évaluations d'impact sont accessibles et responsables.",
     "sectorTitle": "Structure Sectorielle",
     "sectorDesc": "Nos opérations sont divisées en secteurs hautement spécialisés et autonomes. Cette approche modulaire permet une réponse rapide, une expertise spécialisée et une allocation précise des fonds là où ils sont le plus nécessaires.",
     "impactTitle": "Évaluation d'Impact Rigoureuse",
-    "impactDesc": "Chaque initiative fait l'objet d'une évaluation continue et basée sur les données. Nous utilisons des audits indépendants et des mécanismes de rapport transparents pour garantir que chaque contribution se traduit par des résultats mesurables et durables."
+    "impactDesc": "Chaque initiative fait l'objet d'une évaluation continuous et basée sur les données. Nous utilisons des audits indépendants et des mécanismes de rapport transparents pour garantir que chaque contribution se traduit par des résultats mesurables et durables."
   },
   "pillars": {
     "badge": "Nos Domaines d'Intervention",
@@ -129,7 +157,14 @@
     "share": "Partager",
     "print": "Imprimer",
     "by": "Par",
-    "noArticles": "Aucun article trouvé."
+    "noArticles": "Aucun article trouvé.",
+    "catAll": "Tous",
+    "catSocialImpact": "Impact Social",
+    "catEducation": "Éducation",
+    "catHealthcare": "Santé",
+    "catPressReleases": "Communiqués de Presse",
+    "backToNews": "Retour aux actualités",
+    "backToAllNews": "Retour à toutes les actualités"
   },
   "contact": {
     "title": "Partenariat & Contact",
@@ -166,7 +201,15 @@
     "subjectPlaceholder": "De quoi s'agit-il ?",
     "message": "Message",
     "messagePlaceholder": "Veuillez décrire votre proposition ou demande en détail...",
-    "submitRequest": "Envoyer la demande"
+    "submitRequest": "Envoyer la demande",
+    "optionNgo": "ONG",
+    "optionCorporation": "Entreprise",
+    "optionGovernment": "Gouvernement",
+    "optionIndividual": "Individu / Particulier",
+    "subjTechnical": "Proposition de Partenariat Technique",
+    "subjFinancial": "Demande de Contribution Financière",
+    "subjWaqf": "Discussion sur le Projet Waqf",
+    "subjGeneral": "Demande Générale"
   },
   "Admin": {
     "nav": {
@@ -197,6 +240,9 @@
     "video2Title": "Cuisine Communautaire & Préparation des Repas",
     "video2Desc": "Femmes locales préparant de grands repas de riz pour l'entraide communautaire quotidienne.",
     "video3Title": "Rassemblements de Solidarité & Partage de Repas",
-    "video3Desc": "Membres de la communauté réunis pour partager des repas dans un esprit de fraternité."
+    "video3Desc": "Membres de la communauté réunis pour partager des repas dans un esprit de fraternité.",
+    "badgeFoodRelief": "Secours Alimentaire",
+    "badgeCommunityKitchen": "Cuisine Communautaire",
+    "badgeSolidarityGathering": "Rassemblement de Solidarité"
   }
 }

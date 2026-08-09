@@ -153,10 +153,10 @@ export default function ContactPage() {
                     <option disabled value="">
                       {t("structurePlaceholder")}
                     </option>
-                    <option value="ngo">NGO</option>
-                    <option value="corporation">Corporation</option>
-                    <option value="government">Government</option>
-                    <option value="individual">Individual</option>
+                    <option value="ngo">{t("optionNgo")}</option>
+                    <option value="corporation">{t("optionCorporation")}</option>
+                    <option value="government">{t("optionGovernment")}</option>
+                    <option value="individual">{t("optionIndividual")}</option>
                   </select>
                 </div>
               </div>
@@ -209,13 +209,13 @@ export default function ContactPage() {
                     {t("subjectPlaceholder")}
                   </option>
                   <option value="technical">
-                    Technical Partnership Proposal
+                    {t("subjTechnical")}
                   </option>
                   <option value="financial">
-                    Financial Contribution Inquiry
+                    {t("subjFinancial")}
                   </option>
-                  <option value="waqf">Waqf Project Discussion</option>
-                  <option value="general">General Inquiry</option>
+                  <option value="waqf">{t("subjWaqf")}</option>
+                  <option value="general">{t("subjGeneral")}</option>
                 </select>
               </div>
               <div>

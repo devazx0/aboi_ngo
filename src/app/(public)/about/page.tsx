@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { SectionIntro } from "@/components/SectionIntro";
 
 const VALUES = [
   {
@@ -22,6 +21,29 @@ const VALUES = [
 
 export default async function AboutPage() {
   const t = await getTranslations("about");
+
+  const galleryItems = [
+    {
+      src: "/assets/3-woman-serving-food.jpeg",
+      title: t("galleryItem1Title"),
+      desc: t("galleryItem1Desc"),
+    },
+    {
+      src: "/assets/water-tank.jpeg",
+      title: t("galleryItem2Title"),
+      desc: t("galleryItem2Desc"),
+    },
+    {
+      src: "/assets/sharing_rice.png",
+      title: t("galleryItem3Title"),
+      desc: t("galleryItem3Desc"),
+    },
+    {
+      src: "/assets/prayer_2.png",
+      title: t("galleryItem4Title"),
+      desc: t("galleryItem4Desc"),
+    },
+  ];
 
   return (
     <div className="max-w-container-max mx-auto px-gutter py-xl flex flex-col gap-xl">
@@ -123,10 +145,7 @@ export default async function AboutPage() {
           <div className="flex gap-sm items-start">
             <div className="w-1 h-full bg-primary-container self-stretch rounded-full shrink-0" />
             <blockquote className="font-quote text-quote text-on-surface-variant italic">
-              &ldquo;Our strength lies not merely in our resources, but in the
-              unwavering commitment to transparency and the structural integrity
-              of our approach. True solidarity is built on a foundation of
-              measurable impact and rigorous governance.&rdquo;
+              &ldquo;{t("leadershipQuote")}&rdquo;
             </blockquote>
           </div>
           <div>
@@ -142,36 +161,15 @@ export default async function AboutPage() {
       <section className="py-lg">
         <div className="text-center mb-lg">
           <h2 className="font-headline-md text-headline-md text-primary mb-xs">
-            Field Operations & Community Outreach
+            {t("galleryTitle")}
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Direct snapshots from our humanitarian initiatives, clean water drives, and solidarity programs across Benin.
+            {t("gallerySubtitle")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-md">
-          {[
-            {
-              src: "/assets/3-woman-serving-food.jpeg",
-              title: "Food Distribution Drive",
-              desc: "Serving meals to vulnerable families",
-            },
-            {
-              src: "/assets/water-tank.jpeg",
-              title: "Clean Water Installation",
-              desc: "Solar water tanks in rural villages",
-            },
-            {
-              src: "/assets/sharing_rice.png",
-              title: "Solidarity Supplies",
-              desc: "Distributing essential grains & rice",
-            },
-            {
-              src: "/assets/prayer_2.png",
-              title: "Spiritual Gathering",
-              desc: "Promoting community peace & cohesion",
-            },
-          ].map((item) => (
+          {galleryItems.map((item) => (
             <div
               key={item.src}
               className="group relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container shadow-sm hover:shadow-md transition-all duration-300"

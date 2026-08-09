@@ -3,40 +3,13 @@
 import { useState, useEffect, useCallback, useRef, ReactNode } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export interface HeroSlide {
   src: string;
   alt: string;
   badge?: string;
 }
-
-const DEFAULT_SLIDES: HeroSlide[] = [
-  {
-    src: "/assets/standing_in_front_of_mosque.png",
-    alt: "Community in front of Central Mosque Cotonou",
-    badge: "Religious & Social Cohesion",
-  },
-  {
-    src: "/assets/sharing_rice.png",
-    alt: "Food distribution drive providing rice to families",
-    badge: "Solidarity & Food Security",
-  },
-  {
-    src: "/assets/water_tank.png",
-    alt: "Clean water tank project in local village",
-    badge: "Health & Environmental Sustainability",
-  },
-  {
-    src: "/assets/prayer_2.png",
-    alt: "Community gathering and prayer for peace",
-    badge: "Spiritual Unity & Peace",
-  },
-  {
-    src: "/assets/woman_with_food.png",
-    alt: "Empowering women and assisting vulnerable families",
-    badge: "Waqf & Community Empowerment",
-  },
-];
 
 interface HeroSliderProps {
   slides?: HeroSlide[];
@@ -45,10 +18,42 @@ interface HeroSliderProps {
 }
 
 export function HeroSlider({
-  slides = DEFAULT_SLIDES,
+  slides,
   autoPlayInterval = 6000,
   children,
 }: HeroSliderProps) {
+  const t = useTranslations("home");
+
+  const defaultSlides: HeroSlide[] = [
+    {
+      src: "/assets/standing_in_front_of_mosque.png",
+      alt: "Community in front of Central Mosque Cotonou",
+      badge: t("slide1Badge"),
+    },
+    {
+      src: "/assets/sharing_rice.png",
+      alt: "Food distribution drive providing rice to families",
+      badge: t("slide2Badge"),
+    },
+    {
+      src: "/assets/water_tank.png",
+      alt: "Clean water tank project in local village",
+      badge: t("slide3Badge"),
+    },
+    {
+      src: "/assets/prayer_2.png",
+      alt: "Community gathering and prayer for peace",
+      badge: t("slide4Badge"),
+    },
+    {
+      src: "/assets/woman_with_food.png",
+      alt: "Empowering women and assisting vulnerable families",
+      badge: t("slide5Badge"),
+    },
+  ];
+
+  const activeSlides = slides || defaultSlides;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -56,12 +61,12 @@ export function HeroSlider({
   const touchEndX = useRef<number | null>(null);
 
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
+    setCurrentIndex((prev) => (prev + 1) % activeSlides.length);
+  }, [activeSlides.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  }, [slides.length]);
+    setCurrentIndex((prev) => (prev - 1 + activeSlides.length) % activeSlides.length);
+  }, [activeSlides.length]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -93,10 +98,8 @@ export function HeroSlider({
     const minSwipeDistance = 50;
 
     if (distance > minSwipeDistance) {
-      // Swiped Left -> Next Slide
       nextSlide();
     } else if (distance < -minSwipeDistance) {
-      // Swiped Right -> Previous Slide
       prevSlide();
     }
 
@@ -127,7 +130,7 @@ export function HeroSlider({
     >
       {/* Background Image Slides */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {slides.map((slide, idx) => {
+        {activeSlides.map((slide, idx) => {
           const isActive = idx === currentIndex;
           return (
             <div
@@ -153,7 +156,7 @@ export function HeroSlider({
                   isActive ? "scale-105" : "scale-100"
                 }`}
               />
-              {/* Multiplex Overlay Gradients for Optimum Contrast & Readability */}
+              {/* Multiplex Overlay Gradients */}
               <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-surface via-primary/40 to-primary/60 opacity-90" />
               <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30" />
@@ -162,17 +165,17 @@ export function HeroSlider({
         })}
       </div>
 
-      {/* Slide Badge Pill (Top-right or centered above text) */}
-      {slides[currentIndex]?.badge && (
+      {/* Slide Badge Pill */}
+      {activeSlides[currentIndex]?.badge && (
         <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 transition-all duration-500 animate-fade-in">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-surface-container-lowest bg-primary-container/80 backdrop-blur-md border border-white/20 shadow-lg">
             <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse" />
-            {slides[currentIndex].badge}
+            {activeSlides[currentIndex].badge}
           </span>
         </div>
       )}
 
-      {/* Hero Content (Passed from page.tsx) */}
+      {/* Hero Content */}
       <div className="relative z-10 w-full">{children}</div>
 
       {/* Previous / Next Arrow Controls */}
@@ -192,7 +195,7 @@ export function HeroSlider({
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Bottom Pagination Indicators & Auto-play Pause Toggle */}
+      {/* Bottom Pagination Indicators */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/15 shadow-xl">
         <button
           onClick={() => setIsPlaying((prev) => !prev)}
@@ -207,7 +210,7 @@ export function HeroSlider({
         </button>
 
         <div className="flex items-center gap-2">
-          {slides.map((_, idx) => {
+          {activeSlides.map((_, idx) => {
             const isActive = idx === currentIndex;
             return (
               <button
@@ -234,7 +237,7 @@ export function HeroSlider({
         </div>
 
         <span className="text-[11px] font-mono font-medium text-white/80 pl-1">
-          {currentIndex + 1} / {slides.length}
+          {currentIndex + 1} / {activeSlides.length}
         </span>
       </div>
     </section>

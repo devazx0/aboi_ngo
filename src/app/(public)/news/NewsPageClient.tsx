@@ -4,14 +4,19 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-type Category = "All" | "Social Impact" | "Education" | "Healthcare" | "Press Releases";
+type CategoryKey = "All" | "Social Impact" | "Education" | "Healthcare" | "Press Releases";
 
-const CATEGORIES: Category[] = [
-  "All",
-  "Social Impact",
-  "Education",
-  "Healthcare",
-  "Press Releases",
+interface CategoryItem {
+  key: CategoryKey;
+  tKey: string;
+}
+
+const CATEGORIES: CategoryItem[] = [
+  { key: "All", tKey: "catAll" },
+  { key: "Social Impact", tKey: "catSocialImpact" },
+  { key: "Education", tKey: "catEducation" },
+  { key: "Healthcare", tKey: "catHealthcare" },
+  { key: "Press Releases", tKey: "catPressReleases" },
 ];
 
 interface Article {
@@ -30,7 +35,7 @@ interface NewsPageClientProps {
 }
 
 export function NewsPageClient({ articles }: NewsPageClientProps) {
-  const [activeCategory, setActiveCategory] = useState<Category>("All");
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>("All");
   const t = useTranslations("news");
 
   const filteredArticles =
@@ -51,15 +56,15 @@ export function NewsPageClient({ articles }: NewsPageClientProps) {
         <div className="flex flex-wrap gap-xs justify-center md:justify-start mt-4">
           {CATEGORIES.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
               className={`px-4 py-2 rounded-full font-label-md text-label-md transition-colors border ${
-                activeCategory === cat
+                activeCategory === cat.key
                   ? "bg-primary text-on-primary border-primary"
                   : "bg-surface-container-high text-on-surface hover:bg-surface-variant border-outline-variant"
               }`}
             >
-              {cat}
+              {t(cat.tKey)}
             </button>
           ))}
         </div>
