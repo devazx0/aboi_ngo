@@ -244,5 +244,47 @@
     "badgeFoodRelief": "Secours Alimentaire",
     "badgeCommunityKitchen": "Cuisine Communautaire",
     "badgeSolidarityGathering": "Rassemblement de Solidarité"
+  },
+  "waqf": {
+    "badge": "Modèle d'Impact Perpétuel",
+    "title": "Comment Fonctionne Notre Mécanisme de Waqf",
+    "subtitle": "Une approche durable garantissant que chaque contribution crée un bienfait perpétuel pour les générations.",
+    "step1Title": "1. Contribution au Waqf",
+    "step1Desc": "Les donateurs et partenaires apportent des fonds dédiés en dotations perpétuelles.",
+    "step2Title": "2. Investissement d'Actifs",
+    "step2Desc": "Le capital est investi dans des actifs communautaires durables et des infrastructures.",
+    "step3Title": "3. Rendement Continu",
+    "step3Desc": "Les actifs génèrent des revenus fiables et perpétuels année après année.",
+    "step4Title": "4. Impact Éternel",
+    "step4Desc": "100% des produits financent les bourses d'études, la santé, l'eau propre et le secours social."
+  },
+  "testimonials": {
+    "badge": "Voix de la Communauté",
+    "title": "Témoignages d'Impact Direct sur le Terrain",
+    "subtitle": "Des histoires réelles de boursiers, de chefs de village et de familles soutenus par l'ONG-ABOI.",
+    "quote1": "La bourse d'études ABOI m'a donné les outils numériques et le soutien financier pour étudier le génie logiciel.",
+    "name1": "Ismaël Kora",
+    "role1": "Boursier Universitaire",
+    "quote2": "Le système de filtration d'eau solaire a transformé notre village en fournissant de l'eau potable à plus de 800 habitants.",
+    "name2": "El-Hadj Saliou",
+    "role2": "Chef Communautaire, Akpakpa",
+    "quote3": "La cuisine communautaire et les colis alimentaires hebdomadaires garantissent que nos enfants ont des repas nutritifs.",
+    "name3": "Mariam Dossou",
+    "role3": "Bénéficiaire"
+  },
+  "faq": {
+    "badge": "Foire Aux Questions",
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur notre organisation, notre gouvernance et nos partenariats.",
+    "q1": "Comment l'ONG-ABOI garantit-elle la transparence financière ?",
+    "a1": "Nous faisons l'objet d'audits annuels indépendants et maintenons une structure de rapport sectorielle. Chaque rapport est publié avec des indicateurs vérifiés.",
+    "q2": "Qu'est-ce que le modèle de dotation Waqf ?",
+    "a2": "Le Waqf est un mécanisme de dotation dans lequel le capital est préservé dans des actifs générateurs de revenus qui financent en continu les programmes humanitaires.",
+    "q3": "Où l'ONG-ABOI opère-t-elle au Bénin ?",
+    "a3": "Notre siège est à Akpakpa, Cotonou, avec des opérations sur le terrain dans les départements de l'Atlantique, de l'Ouémé et du Borgou.",
+    "q4": "Comment les institutions ou particuliers peuvent-ils devenir partenaires ?",
+    "a4": "Nous proposons des partenariats Techniques, Financiers et Waqf. Vous pouvez remplir notre formulaire de contact ou nous contacter directement.",
+    "q5": "Les dons sont-ils déductibles d'impôts ?",
+    "a5": "Oui, l'ONG-ABOI est une organisation non gouvernementale enregistrée au Bénin (IFU: 6202490658768) avec un statut officiel d'exonération."
   }
 }

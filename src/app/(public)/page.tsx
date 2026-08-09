@@ -4,6 +4,9 @@ import { PillarCard } from "@/components/PillarCard";
 import { NewsCard } from "@/components/NewsCard";
 import { HeroSlider } from "@/components/HeroSlider";
 import { ImpactVideoSection } from "@/components/ImpactVideoSection";
+import { WaqfMechanismSection } from "@/components/WaqfMechanismSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FaqSection } from "@/components/FaqSection";
 
 export default async function HomePage() {
   const t = await getTranslations("home");
@@ -136,6 +139,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Perpetual Waqf Endowment Mechanism Breakdown */}
+      <WaqfMechanismSection />
+
       {/* Key Figures */}
       <section className="py-lg bg-primary-container relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-surface-container-lowest to-transparent" />
@@ -160,6 +166,9 @@ export default async function HomePage() {
 
       {/* Real Field Action Videos */}
       <ImpactVideoSection />
+
+      {/* Beneficiary Stories & Community Voices */}
+      <TestimonialsSection />
 
       {/* Latest News */}
       <section className="py-xl bg-surface">
@@ -187,6 +196,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Frequently Asked Questions */}
+      <FaqSection />
 
       {/* Partnership CTA */}
       <section className="py-xl bg-surface-bright relative border-t border-outline-variant/30">

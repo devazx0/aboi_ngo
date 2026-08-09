@@ -244,5 +244,47 @@
     "badgeFoodRelief": "Food Relief",
     "badgeCommunityKitchen": "Community Kitchen",
     "badgeSolidarityGathering": "Solidarity Gathering"
+  },
+  "waqf": {
+    "badge": "Perpetual Impact Model",
+    "title": "How Our Waqf Endowment Mechanism Works",
+    "subtitle": "A sustainable approach ensuring that every contribution creates everlasting benefit for generations.",
+    "step1Title": "1. Waqf Contribution",
+    "step1Desc": "Donors and partners contribute funds dedicated as perpetual endowments.",
+    "step2Title": "2. Asset Investment",
+    "step2Desc": "Capital is invested in sustainable community assets, agriculture, and infrastructure.",
+    "step3Title": "3. Continuous Yield",
+    "step3Desc": "Endowment assets generate reliable, perpetual revenue year after year.",
+    "step4Title": "4. Everlasting Impact",
+    "step4Desc": "100% of proceeds fund scholarships, healthcare, clean water, and social relief."
+  },
+  "testimonials": {
+    "badge": "Community Voices",
+    "title": "Stories of Direct Field Impact",
+    "subtitle": "Real testimonies from scholars, village leaders, and families supported by NGO-ABOI.",
+    "quote1": "The ABOI educational grant gave me the digital tools and tuition support to pursue software engineering.",
+    "name1": "Ismaël Kora",
+    "role1": "University Scholar",
+    "quote2": "The solar-powered water filtration system transformed our village, providing safe drinking water for 800+ residents.",
+    "name2": "El-Hadj Saliou",
+    "role2": "Community Leader, Akpakpa",
+    "quote3": "The community kitchen and weekly food packs ensure our children have nutritious meals during hard seasons.",
+    "name3": "Mariam Dossou",
+    "role3": "Family Beneficiary"
+  },
+  "faq": {
+    "badge": "Questions & Answers",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our organization, governance, and partnership models.",
+    "q1": "How does NGO-ABOI ensure financial transparency?",
+    "a1": "We undergo independent annual audits and maintain a modular sector-based reporting structure. Every project report is published with verified metric benchmarks.",
+    "q2": "What is the Waqf endowment model?",
+    "a2": "Waqf is an Islamic endowment mechanism where capital is preserved in revenue-generating assets, and the ongoing returns continuously fund humanitarian programs.",
+    "q3": "Where does NGO-ABOI operate in Benin?",
+    "a3": "Our headquarters are in Akpakpa, Cotonou, with active field operations spanning rural districts across the Atlantic, Ouémé, and Borgou departments.",
+    "q4": "How can institutions or individuals partner with us?",
+    "a4": "We offer Technical, Financial, and Waqf partnership tracks. You can fill out our Contact & Partnership form or reach out directly to our leadership team.",
+    "q5": "Are donations tax-deductible for registered organizations?",
+    "a5": "Yes, NGO-ABOI is a fully registered non-governmental organization in Benin (IFU: 6202490658768) with official tax-exempt status."
   }
 }
