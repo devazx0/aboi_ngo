@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { SectionIntro } from "@/components/SectionIntro";
 import { PillarCard } from "@/components/PillarCard";
 import { NewsCard } from "@/components/NewsCard";
+import { HeroSlider } from "@/components/HeroSlider";
 
 const PILLARS = [
   {
@@ -83,18 +84,8 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-surface-dim">
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/assets/standing_in_front_of_mosque.png')",
-            }}
-          />
-          <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-surface/90" />
-        </div>
-        <div className="relative z-10 max-w-container-max mx-auto px-gutter text-center flex flex-col items-center py-xl">
+      <HeroSlider>
+        <div className="max-w-container-max mx-auto px-gutter text-center flex flex-col items-center py-xl">
           <h1 className="font-display-lg text-display-lg md:text-[64px] text-surface-container-lowest max-w-4xl mb-md drop-shadow-md">
             {t("heroTitle")}
           </h1>
@@ -116,7 +107,7 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </HeroSlider>
 
       {/* Welcome Section */}
       <section className="py-xl bg-surface">
