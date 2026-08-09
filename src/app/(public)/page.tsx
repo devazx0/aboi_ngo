@@ -50,9 +50,8 @@ const NEWS_ITEMS = [
     title: "Clean Water Initiative Reaches 10 New Villages",
     description:
       "Our latest ecological health drive successfully installed solar-powered water filtration systems in rural communities.",
-    imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCEysqyuPlJJI8S_vGGfgX3a37AQ5x_fyEH5pgH__zr3w_cNF6dhgHfN3mDUbDiXLRhsG71MUUse6ayMIDSX1vwuXjzYF1Hra5hA8aZ29o-f4gnUStlzTeeMQOkhHuJo2ansLyQCCfLerq935cJ5x4KxZXXYyNktp-pIOtE1EZKoK5C7nVBiwh4hrC3lbDDJpwaqAHR5zBuD6AkUKYsnvp7AWOuUnY7MhGf9ZhjPnBkEsoKgApbZPIfl2LGIm9oiDbiDR6t0jwChBM",
-    imageAlt: "Solar-powered water filtration system",
+    imageUrl: "/assets/water_tank.png",
+    imageAlt: "Water tank providing clean water",
     href: "#",
   },
   {
@@ -72,9 +71,8 @@ const NEWS_ITEMS = [
     title: "Interfaith Dialogue for Regional Cohesion",
     description:
       "A landmark symposium bringing together community leaders to draft a unified charter for lasting peace and solidarity.",
-    imageUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAdRwVVk03GZ7yTGnAQnzTrzshWdn2D--NCaCIESo4Zgh6vpIk_I1wdUbEWPpLyE-vbxmnK5ByUGx78Ftc8NTAusHPsG_F7tkWbHqGEqZDOuG7aRb5PEqb8TG26ciYUPwfniPFjBh9AM4yO8jNgx9gMWpelWMiU8a_K0X_7MPyU559zfBFlxx3L_hY1VNApg73iLeeYonMO9JX-8efusClNKL8QqBuqM5245P9KVV4jWzdFfEiOacIzl531waMh0OAcTfjTLC2grX4",
-    imageAlt: "Community leaders at peace dialogue",
+    imageUrl: "/assets/prayer.png",
+    imageAlt: "Community in prayer",
     href: "#",
   },
 ];
@@ -90,8 +88,7 @@ export default async function HomePage() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage:
-                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDj8-4uc24GQd4sAUrylEfNEJtAc4ROygcoriuNUcLSwhk9DkKUekcTVJKXhJmh7jCQVvE5iQFl9nEyWGMPEHjuTWz9LftSWZP3Z_ooMRF9Ogpama5yNZzGfvNhtINZaIlYm8oDKV_N9JvT4hZziI9U92VTF5Hn2tFDMazpTwbjOsr3CYNKrAE8MilZj-Vu6dYH5lwr1D5Ac0ny-HHpDRwrAkoaL0N_ZcijIotoWSuH4D-5DwLRHWb2tbLhnKfbrMYinJ2UtW_DFQ')",
+              backgroundImage: "url('/assets/standing_in_front_of_mosque.png')",
             }}
           />
           <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />

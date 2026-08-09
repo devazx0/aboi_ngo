@@ -111,7 +111,7 @@ export default async function AboutPage() {
             <img
               className="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1JdwF2G23UF3KfQDT5RgOcaKni7-jgknZ72zY12_HqNQI-APeDDYSUoyLbovWODfXIcJrZDaE2h_PkEPEL1xKd0-CMQNzSF_cFe_GqLzoaZPX0-RP1gkErE7f5rUgZC69iywLUtNLczQHHiornXigUuDEoiKeDGAnDsRe6amiOatga3f-Bs-xcX7t7CPzN8kHm-Hgwm3LTCfQZE-byhnOwCcblDqvP6MjGVaj81m4_dIjfVauRZVSewSc7va0RYQBqpv4htTMjc"
-              alt="Dr. Amina Oumarou, President of NGO-ABOI"
+              alt={t("presidentImgAlt")}
             />
           </div>
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-secondary-container rounded-full opacity-20 blur-2xl -z-10" />

@@ -6,9 +6,11 @@
     "news": "News",
     "contact": "Contact",
     "becomePartner": "Become a Partner",
-    "language": "FR | AR | EN"
+    "logoAlt": "NGO-ABOI Logo"
   },
   "footer": {
+    "orgName": "NGO-ABOI",
+    "logoAlt": "NGO-ABOI Logo",
     "tagline": "Driving sustainable impact and spiritual growth across communities.",
     "quickLinks": "Quick Links",
     "mission": "Mission",
@@ -65,6 +67,7 @@
     "messageTitle": "Message from Leadership",
     "presidentName": "Dr. Amina Oumarou",
     "presidentRole": "President, NGO-ABOI",
+    "presidentImgAlt": "Dr. Amina Oumarou, President of NGO-ABOI",
     "transparency": "Institutional Transparency",
     "transparencyText": "We operate with a commitment to clarity, ensuring our structure and impact evaluations are accessible and accountable.",
     "sectorTitle": "Sector-Based Structure",
@@ -84,6 +87,7 @@
     "subtitle": "Stay updated with our latest initiatives, community impact stories, and official press releases from across our operational regions.",
     "all": "All",
     "readFullStory": "Read Full Story",
+    "readReport": "Read Report",
     "featuredStory": "Featured Story",
     "tags": "Tags:",
     "share": "Share",

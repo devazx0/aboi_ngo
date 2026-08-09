@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type PillarCardProps = {
   icon: string;
@@ -39,6 +40,7 @@ export function PillarCard({
   blurColor,
 }: PillarCardProps) {
   const styles = ACCENT_STYLES[accentColor];
+  const t = useTranslations("home");
 
   return (
     <div
@@ -70,7 +72,7 @@ export function PillarCard({
             href={href}
             className={`font-label-md text-label-md uppercase inline-flex items-center gap-xs ${styles.link} transition-colors`}
           >
-            Learn More{" "}
+            {t("learnMore")}{" "}
             <span className="material-symbols-outlined text-sm">
               arrow_forward
             </span>

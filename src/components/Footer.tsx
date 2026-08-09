@@ -11,11 +11,11 @@ export async function Footer() {
           <div className="flex items-center gap-xs">
             <img
               src="/logo.png"
-              alt="NGO-ABOI Logo"
+              alt={t("logoAlt")}
               className="h-10 w-auto object-contain"
             />
             <h2 className="font-headline-lg text-headline-lg text-surface-container-lowest">
-              NGO-ABOI
+              {t("orgName")}
             </h2>
           </div>
           <p className="font-body-md text-body-md text-on-tertiary-container">

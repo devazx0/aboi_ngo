@@ -6,9 +6,11 @@
     "news": "أخبار",
     "contact": "اتصال",
     "becomePartner": "كن شريكًا",
-    "language": ".FR | AR | EN"
+    "logoAlt": "شعار منظمة ABOI"
   },
   "footer": {
+    "orgName": "منظمة ABOI",
+    "logoAlt": "شعار منظمة ABOI",
     "tagline": "دفع الأثر المستدام والنمو الروحي عبر المجتمعات.",
     "quickLinks": "روابط سريعة",
     "mission": "رسالتنا",
@@ -64,7 +66,8 @@
     "fraternity": "الإخاء",
     "messageTitle": "رسالة من القيادة",
     "presidentName": "د. أمينة عمر",
-    "presidentRole": "رئيسة منظمة NGO-ABOI",
+    "presidentRole": "رئيسة منظمة ABOI",
+    "presidentImgAlt": "د. أمينة عمر، رئيسة منظمة ABOI",
     "transparency": "الشفافية المؤسسية",
     "transparencyText": "نعمل بالتزام بالوضوح، ونضمن أن هيكلنا وتقييمات أثرنا متاحة وخاضعة للمساءلة.",
     "sectorTitle": "الهيكل القطاعي",
@@ -83,7 +86,8 @@
     "title": "الأخبار ومباشرة من الميدان",
     "subtitle": "تابع أحدث مبادراتنا وقصص التأثير المجتمعي والبيانات الصحفية الرسمية من جميع مناطق عملياتنا.",
     "all": "الكل",
-    "readFullStory": "اقرأ القصة كاملة",
+    "readFullStory": "قراءة القصة كاملة",
+    "readReport": "قراءة التقرير",
     "featuredStory": "قصة مميزة",
     "tags": "الوسوم:",
     "share": "مشاركة",

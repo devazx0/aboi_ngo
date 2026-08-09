@@ -6,9 +6,11 @@
     "news": "Actualités",
     "contact": "Contact",
     "becomePartner": "Devenir Partenaire",
-    "language": "FR | AR | EN"
+    "logoAlt": "Logo ONG-ABOI"
   },
   "footer": {
+    "orgName": "ONG-ABOI",
+    "logoAlt": "Logo ONG-ABOI",
     "tagline": "Stimuler l'impact durable et la croissance spirituelle à travers les communautés.",
     "quickLinks": "Liens rapides",
     "mission": "Mission",
@@ -64,7 +66,8 @@
     "fraternity": "Fraternité",
     "messageTitle": "Message de la Direction",
     "presidentName": "Dr. Amina Oumarou",
-    "presidentRole": "Présidente, NGO-ABOI",
+    "presidentRole": "Présidente, ONG-ABOI",
+    "presidentImgAlt": "Dr. Amina Oumarou, Présidente de l'ONG-ABOI",
     "transparency": "Transparence Institutionnelle",
     "transparencyText": "Nous opérons avec un engagement de clarté, garantissant que notre structure et nos évaluations d'impact sont accessibles et responsables.",
     "sectorTitle": "Structure Sectorielle",
@@ -83,7 +86,8 @@
     "title": "Actualités & Terrains",
     "subtitle": "Restez informé de nos dernières initiatives, histoires d'impact communautaire et communiqués de presse officiels de nos régions d'opération.",
     "all": "Tous",
-    "readFullStory": "Lire l'article",
+    "readFullStory": "Lire l'histoire complète",
+    "readReport": "Lire le rapport",
     "featuredStory": "Article à la une",
     "tags": "Tags :",
     "share": "Partager",

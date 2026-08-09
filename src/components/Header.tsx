@@ -28,7 +28,7 @@ export function Header() {
       <div className="flex items-center gap-sm">
         <Link href="/" className="flex items-center gap-sm">
           <img
-            alt="NGO-ABOI Logo"
+            alt={t("logoAlt")}
             className="h-[40px] w-auto object-contain"
             src="/logo.png"
           />

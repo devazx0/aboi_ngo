@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type NewsCardProps = {
   category: string;
@@ -27,6 +28,8 @@ export function NewsCard({
   href = "#",
   categoryColor = "primary",
 }: NewsCardProps) {
+  const t = useTranslations("news");
+
   return (
     <article className="bg-surface-container-lowest rounded-lg border border-outline-variant overflow-hidden flex flex-col group hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-shadow">
       <div className="h-48 w-full relative overflow-hidden bg-surface-container-highest">
@@ -56,7 +59,7 @@ export function NewsCard({
           href={href}
           className="font-label-md text-label-md text-primary mt-auto flex items-center gap-xs"
         >
-          Read Report{" "}
+          {t("readReport")}{" "}
           <span className="material-symbols-outlined text-[16px]">
             arrow_forward
           </span>
