@@ -156,8 +156,10 @@ export function HeroSlider({
                   isActive ? "scale-105" : "scale-100"
                 }`}
               />
-              {/* Subtle Overlay for Image Clarity & Text Legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/35" />
+              {/* Brand Theme Overlay (Tuned for High Image Visibility & Text Contrast) */}
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/85 via-primary/20 to-primary/35 opacity-65" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/20" />
             </div>
           );
         })}
