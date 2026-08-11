@@ -7,7 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { setLocale } from "@/actions/locale";
 import { localeOrder } from "@/utils/locale";
 
-const NAV_HREFS = ["/", "/about", "/pillars", "/news", "/contact"] as const;
+const NAV_HREFS = ["/", "/about", "/pillars", "/news", "/contact", "/donate"] as const;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,6 +21,7 @@ export function Header() {
     t("pillars"),
     t("news"),
     t("contact"),
+    t("donate"),
   ];
 
   return (
@@ -76,9 +77,16 @@ export function Header() {
         </div>
         <Link
           href="/contact"
-          className="bg-primary-container text-on-primary h-[48px] px-[16px] rounded font-label-md text-label-md hover:opacity-90 transition-opacity inline-flex items-center"
+          className="border border-primary text-primary hover:bg-primary/5 h-[44px] px-[16px] rounded font-label-md text-label-md transition-colors inline-flex items-center"
         >
           {t("becomePartner")}
+        </Link>
+        <Link
+          href="/donate"
+          className="bg-secondary-container text-on-secondary-container hover:bg-secondary-container/90 h-[44px] px-[18px] rounded font-label-md text-label-md font-bold shadow-xs hover:shadow-sm transition-all inline-flex items-center gap-1.5"
+        >
+          <span className="material-symbols-outlined text-[18px]">favorite</span>
+          {t("donate")}
         </Link>
       </div>
 
@@ -138,13 +146,23 @@ export function Header() {
                 </span>
               ))}
             </div>
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="bg-primary-container text-on-primary h-[48px] px-[16px] rounded font-label-md text-label-md hover:opacity-90 transition-opacity inline-flex items-center justify-center"
-            >
-              {t("becomePartner")}
-            </Link>
+            <div className="flex flex-col gap-2 pt-2">
+              <Link
+                href="/donate"
+                onClick={() => setMobileOpen(false)}
+                className="bg-secondary-container text-on-secondary-container h-[48px] px-[16px] rounded font-label-md text-label-md font-bold inline-flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-[20px]">favorite</span>
+                {t("donate")}
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="border border-primary text-primary h-[48px] px-[16px] rounded font-label-md text-label-md inline-flex items-center justify-center"
+              >
+                {t("becomePartner")}
+              </Link>
+            </div>
           </nav>
         </div>
       )}

@@ -32,6 +32,8 @@ export async function Footer() {
               { label: t("mission"), href: "/about" },
               { label: t("ourPillars"), href: "/pillars" },
               { label: t("newsImpact"), href: "/news" },
+              { label: t("donate"), href: "/donate" },
+              { label: t("contactUs"), href: "/contact" },
             ].map((link) => (
               <li key={link.href}>
                 <Link
