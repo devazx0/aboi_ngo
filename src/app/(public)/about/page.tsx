@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+
+export const metadata: Metadata = {
+  title: "About ABOI NGO (ONG ABOI) — Mission, Vision & Values in Benin",
+  description:
+    "Who is ABOI NGO / ONG ABOI? Association Béninoise des Oeuvres Islamiques — mission, vision, core values, leadership and field action across Benin.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About ABOI NGO (ONG ABOI) — Mission & Values",
+    description:
+      "Charity, orthodoxy, excellence and fraternity — discover the mission of ABOI NGO in Benin.",
+    url: "/about",
+  },
+};
 
 const VALUES = [
   {

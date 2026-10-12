@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { PostStatus } from "@/generated/client";
 import { NewsPageClient } from "./NewsPageClient";
+
+export const metadata: Metadata = {
+  title: "News & Field Actions | ABOI NGO — ONG ABOI Benin",
+  description:
+    "Latest news and field actions from ABOI NGO / ONG ABOI Benin: clean water, orphan support, education awards, health camps and community stories.",
+  alternates: { canonical: "/news" },
+  openGraph: {
+    title: "News & Field Actions | ABOI NGO",
+    description:
+      "Follow ONG ABOI field actions across Benin — water, education, health and solidarity.",
+    url: "/news",
+  },
+};
 
 export const revalidate = 60;
 
