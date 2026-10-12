@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 5007",
-    "build": "prisma generate && next build",
+    "dev": "node api.js && next dev -p 5007",
+    "build": "node api.js && prisma generate && next build",
     "postinstall": "prisma generate",
-    "start": "next start -p 5007",
+    "start": "node api.js && next start -p 5007",
     "lint": "eslint"
   },
   "dependencies": {

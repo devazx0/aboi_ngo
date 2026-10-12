@@ -5,6 +5,7 @@ import { unstable_cache } from "next/cache";
 import { getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { PostStatus } from "@/generated/client";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const revalidate = 60;
 
@@ -53,9 +54,24 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | ABOI NGO`,
+    title: `${post.title} | ABOI NGO — ONG ABOI`,
     description: post.excerpt || post.title,
+    alternates: { canonical: `/news/${post.slug}` },
+    authors: post.author?.name ? [{ name: post.author.name }] : undefined,
     openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt || post.title,
+      url: `/news/${post.slug}`,
+      publishedTime: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
+      modifiedTime: new Date(post.updatedAt).toISOString(),
+      authors: post.author?.name ? [post.author.name] : undefined,
+      images: post.coverImage
+        ? [{ url: post.coverImage, alt: post.title }]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
       title: post.title,
       description: post.excerpt || post.title,
       images: post.coverImage ? [post.coverImage] : [],
@@ -86,6 +102,17 @@ export default async function NewsDetailPage({
 
   return (
     <article className="max-w-container-max mx-auto px-gutter py-xl">
+      <ArticleJsonLd
+        title={post.title}
+        description={post.excerpt || post.title}
+        slug={post.slug}
+        image={post.coverImage}
+        datePublished={
+          post.publishedAt ? new Date(post.publishedAt).toISOString() : null
+        }
+        dateModified={new Date(post.updatedAt).toISOString()}
+        authorName={post.author?.name}
+      />
       <div className="max-w-4xl mx-auto">
         {/* Back Link */}
         <Link

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { PillarCard } from "@/components/PillarCard";
@@ -7,6 +8,19 @@ import { ImpactVideoSection } from "@/components/ImpactVideoSection";
 import { WaqfMechanismSection } from "@/components/WaqfMechanismSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FaqSection } from "@/components/FaqSection";
+
+export const metadata: Metadata = {
+  title: "ABOI NGO | ONG ABOI — Charity, Education & Peace in Benin",
+  description:
+    "ABOI NGO (ONG ABOI, Association Béninoise des Oeuvres Islamiques) — clean water, orphan support, education, health camps and peace building across Benin.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "ABOI NGO | ONG ABOI — Charity, Education & Peace in Benin",
+    description:
+      "Clean water, orphan support, education excellence, health and peace — ABOI NGO serves communities across Benin.",
+    url: "/",
+  },
+};
 
 export default async function HomePage() {
   const t = await getTranslations("home");
