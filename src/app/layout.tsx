@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getLocale } from "next-intl/server";
 import { localeDirections } from "@/utils/locale";
 import { QueryProvider } from "@/service/QueryProvider";
+import { siteUrl, siteConfig } from "@/lib/site";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -19,9 +20,65 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NGO-ABOI | Association for Charity & Guidance",
-  description:
-    "Dedicated to Charity, Scientific Excellence, and Peace in Benin. NGO ABOI works daily for the spiritual, social, educational, and health development of communities.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "ABOI NGO | ONG ABOI — Charity, Education & Peace in Benin",
+    template: "%s | ABOI NGO — ONG ABOI",
+  },
+  description: siteConfig.description,
+  keywords: [
+    "ABOI NGO",
+    "ONG ABOI",
+    "NGO-ABOI",
+    "Association Béninoise des Oeuvres Islamiques",
+    "NGO Benin",
+    "ONG Bénin",
+    "charity Benin",
+    "Islamic charity Benin",
+    "Cotonou NGO",
+    "clean water Benin",
+    "orphan support Benin",
+    "education Benin",
+    "waqf Benin",
+  ],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    alternateLocale: ["fr_FR", "ar_AR"],
+    url: "/",
+    siteName: "ABOI NGO — ONG ABOI",
+    title: "ABOI NGO | ONG ABOI — Charity, Education & Peace in Benin",
+    description: siteConfig.description,
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: "ABOI NGO — ONG ABOI logo" }],
+  },
+  twitter: {
+    card: siteConfig.twitterCard,
+    title: "ABOI NGO | ONG ABOI — Charity, Education & Peace in Benin",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Set GOOGLE_SITE_VERIFICATION in Vercel env (GSC HTML-tag method).
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : {}),
+  },
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",

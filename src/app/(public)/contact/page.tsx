@@ -1,9 +1,21 @@
-"use client";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
+export const metadata: Metadata = {
+  title: "Contact ABOI NGO (ONG ABOI) — Partner, Donate & Volunteer in Benin",
+  description:
+    "Contact ABOI NGO / ONG ABOI in Cotonou, Benin — partnerships, donations, waqf and volunteering. Headquarters address, phone, email and office hours.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact ABOI NGO (ONG ABOI) — Benin",
+    description:
+      "Become a partner or volunteer — contact ONG ABOI in Cotonou, Benin.",
+    url: "/contact",
+  },
+};
 
-export default function ContactPage() {
-  const t = useTranslations("contact");
+export default async function ContactPage() {
+  const t = await getTranslations("contact");
 
   return (
     <div className="max-w-container-max mx-auto px-gutter py-xl">
@@ -119,7 +131,6 @@ export default function ContactPage() {
             <form
               action="#"
               className="space-y-md"
-              onSubmit={(e) => e.preventDefault()}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div>
