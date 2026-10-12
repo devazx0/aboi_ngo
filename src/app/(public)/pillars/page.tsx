@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { SectionIntro } from "@/components/SectionIntro";
 import { PillarDetail } from "@/components/PillarDetail";
+
+export const metadata: Metadata = {
+  title: "Our Pillars — Religion, Social, Education & Health | ABOI NGO",
+  description:
+    "The 4 pillars of ABOI NGO / ONG ABOI in Benin: religious guidance, social aid & waqf, education, health & environment. Clean water, orphans, madrasas, wells.",
+  alternates: { canonical: "/pillars" },
+  openGraph: {
+    title: "Our Pillars | ABOI NGO — ONG ABOI",
+    description:
+      "Religion, social action, education and health — how ONG ABOI serves Benin communities.",
+    url: "/pillars",
+  },
+};
 
 export default async function PillarsPage() {
   const t = await getTranslations("pillars");
